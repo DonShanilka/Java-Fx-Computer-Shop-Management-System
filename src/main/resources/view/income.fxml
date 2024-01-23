@@ -2,11 +2,12 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #e7e6ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBordController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #dbd9ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBordController">
    <children>
       <Label layoutX="19.0" layoutY="14.0" text="Analytic Overview">
          <font>
@@ -23,5 +24,6 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
+      <Pane layoutX="109.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;" />
    </children>
 </AnchorPane>
