@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="760.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBordController">
+<AnchorPane prefHeight="760.0" prefWidth="1350.0" style="-fx-background-color: #ebebff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBordController">
    <children>
-      <Pane prefHeight="760.0" prefWidth="248.0" style="-fx-background-color: #000036;" />
-      <AnchorPane layoutX="248.0" layoutY="77.0" prefHeight="683.0" prefWidth="1103.0" />
+      <Pane layoutY="52.0" prefHeight="708.0" prefWidth="248.0" style="-fx-background-color: #000036;">
+         <children>
+            <Pane layoutY="-53.0" prefHeight="54.0" prefWidth="1351.0" style="-fx-background-color: #00002e;">
+               <children>
+                  <Label layoutX="7.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Chama" textFill="#ff5c00">
+                     <font>
+                        <Font name="Corbel Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="102.0" layoutY="13.0" prefHeight="34.0" prefWidth="123.0" text="Computers" textFill="#ff5500b1">
+                     <font>
+                        <Font name="Cambria Math" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXButton layoutX="89.0" layoutY="46.0" prefHeight="36.0" prefWidth="145.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="89.0" layoutY="82.0" prefHeight="36.0" prefWidth="145.0" text="      Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="89.0" layoutY="118.0" prefHeight="36.0" prefWidth="145.0" text="      Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="84.0" layoutY="154.0" prefHeight="36.0" prefWidth="145.0" text="Item" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="248.0" layoutY="52.0" prefHeight="708.0" prefWidth="1103.0" style="-fx-background-color: white;" />
    </children>
 </AnchorPane>
