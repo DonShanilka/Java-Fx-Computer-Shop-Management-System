@@ -98,6 +98,11 @@
                </font>
             </Label>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="602.0" layoutY="253.0" stroke="#3e30ff" strokeType="INSIDE" width="459.0" />
+            <Label layoutX="779.0" layoutY="95.0" text="Company Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
