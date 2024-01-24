@@ -103,7 +103,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="789.0" layoutY="105.0" text="Company Details" textFill="WHITE">
+            <Label layoutX="771.0" layoutY="256.0" text="Educatoinal Details" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
