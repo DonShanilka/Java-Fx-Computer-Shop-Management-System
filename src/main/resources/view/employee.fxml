@@ -107,7 +107,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="317.0" />
+            <TextField layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="317.0" style="-fx-background-color: white;" />
          </children>
       </Pane>
    </children>
