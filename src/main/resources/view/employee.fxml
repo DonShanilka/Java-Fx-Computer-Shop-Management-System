@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -13,7 +12,7 @@
    <children>
       <Pane layoutX="14.0" layoutY="15.0" prefHeight="654.0" prefWidth="1075.0" style="-fx-background-color: fff;">
          <children>
-            <Label layoutX="528.0" layoutY="9.0" text="Employee">
+            <Label layoutX="953.0" layoutY="8.0" text="Employee">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -24,7 +23,6 @@
                 <TableColumn prefWidth="75.0" text="C2" />
               </columns>
             </TableView>
-            <Line endX="432.0" layoutX="597.0" layoutY="53.0" startX="-571.0" />
             <Label layoutX="26.0" layoutY="139.0" text="ID :">
                <font>
                   <Font name="System Bold" size="12.0" />
