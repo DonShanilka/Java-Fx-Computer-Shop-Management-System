@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -108,6 +109,7 @@
                </font>
             </Label>
             <TextField layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="317.0" style="-fx-background-color: white;" />
+            <Line endX="214.0" layoutX="128.0" layoutY="52.0" startX="-103.0" stroke="#040057" />
          </children>
       </Pane>
    </children>
