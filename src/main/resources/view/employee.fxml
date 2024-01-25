@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="189.0" text="Name ">
+            <Label layoutX="24.0" layoutY="192.0" text="Name ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -111,12 +111,12 @@
             </Label>
             <TextField layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="317.0" style="-fx-background-color: white;" />
             <Line endX="214.0" layoutX="128.0" layoutY="52.0" startX="-103.0" stroke="#040057" />
-            <TextField layoutX="117.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField layoutX="117.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="117.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField layoutX="117.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="283.0" prefHeight="25.0" prefWidth="174.0" />
             <TextField layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" />
             <TextField layoutX="117.0" layoutY="378.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="391.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" />
             <ComboBox layoutX="391.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
             <ComboBox layoutX="391.0" layoutY="225.0" prefHeight="25.0" prefWidth="174.0" />
@@ -125,6 +125,37 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <Label layoutX="108.0" layoutY="382.0" text=":">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="334.0" text=":">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="287.0" text=":">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="238.0" text=":">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="189.0" text=":">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="87.0" layoutX="204.0" layoutY="160.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="204.0" layoutY="355.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="204.0" layoutY="308.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="204.0" layoutY="258.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="204.0" layoutY="213.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="204.0" layoutY="403.0" startX="-87.0" />
          </children>
       </Pane>
    </children>
