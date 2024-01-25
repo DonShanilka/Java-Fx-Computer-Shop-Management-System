@@ -20,7 +20,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TableView layoutX="12.0" layoutY="440.0" prefHeight="200.0" prefWidth="1052.0">
+            <TableView layoutX="11.0" layoutY="440.0" prefHeight="200.0" prefWidth="1054.0">
               <columns>
                 <TableColumn prefWidth="115.0" text="NIC" />
                 <TableColumn prefWidth="181.0" text="Name" />
