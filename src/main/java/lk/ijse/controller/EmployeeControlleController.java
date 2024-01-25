@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.ijse.dto.EmployeeDto;
+import lk.ijse.model.EmployeeModel;
 import lk.ijse.tm.EmployeeTm;
 
 public class EmployeeControlleController {
@@ -13,5 +15,14 @@ public class EmployeeControlleController {
 
 
     public void empSaveOnAction(ActionEvent actionEvent) {
+
+        String nic = txtNic.getText();
+
+        var dto = new EmployeeDto(nic);
+
+        try {
+            boolean isSave = EmployeeModel.
+        }
+
     }
 }
