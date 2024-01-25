@@ -22,8 +22,16 @@
             </Label>
             <TableView layoutX="12.0" layoutY="440.0" prefHeight="200.0" prefWidth="1052.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="115.0" text="NIC" />
+                <TableColumn prefWidth="181.0" text="Name" />
+                  <TableColumn prefWidth="187.0" text="Address" />
+                  <TableColumn prefWidth="148.0" text="Email" />
+                  <TableColumn prefWidth="110.0" text="Teliphone" />
+                  <TableColumn prefWidth="110.0" text="B'Day" />
+                  <TableColumn prefWidth="77.0" text="Gender" />
+                  <TableColumn prefWidth="77.0" text="Relation" />
+                  <TableColumn prefWidth="77.0" text="E ID" />
+                  <TableColumn prefWidth="77.0" text="Rolle" />
               </columns>
             </TableView>
             <Label layoutX="26.0" layoutY="139.0" text="NIC ">
@@ -61,12 +69,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="184.0" text="Email ">
+            <Label layoutX="305.0" layoutY="193.0" text="Email ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="304.0" layoutY="229.0" text="Relationship ">
+            <Label layoutX="305.0" layoutY="238.0" text="Relationship ">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -117,9 +125,9 @@
             <TextField layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="378.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="391.0" layoutY="180.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <ComboBox layoutX="391.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
-            <ComboBox layoutX="391.0" layoutY="225.0" prefHeight="25.0" prefWidth="174.0" />
+            <ComboBox layoutX="391.0" layoutY="234.0" prefHeight="25.0" prefWidth="174.0" />
             <Label layoutX="109.0" layoutY="139.0" text=":">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -156,18 +164,18 @@
             <Line endX="87.0" layoutX="204.0" layoutY="258.0" startX="-87.0" />
             <Line endX="87.0" layoutX="204.0" layoutY="213.0" startX="-87.0" />
             <Line endX="87.0" layoutX="204.0" layoutY="403.0" startX="-87.0" />
-            <Line endX="87.0" layoutX="478.0" layoutY="206.0" startX="-87.0" />
+            <Line endX="87.0" layoutX="478.0" layoutY="212.0" startX="-87.0" />
             <Label layoutX="382.0" layoutY="139.0" text=":">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="382.0" layoutY="229.0" text=":">
+            <Label layoutX="382.0" layoutY="238.0" text=":">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="382.0" layoutY="184.0" text=":">
+            <Label layoutX="383.0" layoutY="193.0" text=":">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
