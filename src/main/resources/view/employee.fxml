@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -20,9 +21,9 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TableView layoutX="11.0" layoutY="440.0" prefHeight="200.0" prefWidth="1054.0">
+            <TableView layoutX="11.0" layoutY="450.0" prefHeight="200.0" prefWidth="1054.0">
               <columns>
-                <TableColumn prefWidth="115.0" text="NIC" />
+                <TableColumn fx:id="tmNic" prefWidth="115.0" text="NIC" />
                 <TableColumn prefWidth="181.0" text="Name" />
                   <TableColumn prefWidth="187.0" text="Address" />
                   <TableColumn prefWidth="148.0" text="Email" />
@@ -119,7 +120,7 @@
             </Label>
             <TextField layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="317.0" style="-fx-background-color: white;" />
             <Line endX="214.0" layoutX="128.0" layoutY="52.0" startX="-103.0" stroke="#040057" />
-            <TextField layoutX="117.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtNic" layoutX="117.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="283.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
@@ -180,6 +181,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <JFXButton layoutX="602.0" layoutY="416.0" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #3e30ff;" text="Save" textFill="WHITE" />
          </children>
       </Pane>
    </children>
