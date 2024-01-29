@@ -102,14 +102,14 @@
                </font>
             </Label>
             <TextField fx:id="txtNic" layoutX="117.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="117.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="117.0" layoutY="283.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="117.0" layoutY="378.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <ComboBox layoutX="391.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
-            <ComboBox layoutX="391.0" layoutY="234.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtAddress" layoutX="117.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtEmail" layoutX="117.0" layoutY="283.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtMobile" layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtBdaY" layoutX="117.0" layoutY="378.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtName" layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtEmail" layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <ComboBox fx:id="txtGebder" layoutX="391.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
+            <ComboBox fx:id="txtRelation" layoutX="391.0" layoutY="234.0" prefHeight="25.0" prefWidth="174.0" />
             <Label layoutX="109.0" layoutY="139.0" text=":">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -186,18 +186,23 @@
             <Line endX="169.0" layoutX="917.0" layoutY="298.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="341.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="383.0" startX="-100.0" />
-            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="506.0" prefHeight="193.0" prefWidth="1087.0">
+            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="506.0" prefHeight="193.0" prefWidth="2067.0">
               <columns>
                 <TableColumn fx:id="tmNic" prefWidth="115.0" text="NIC" />
-                <TableColumn prefWidth="181.0" text="Name" />
-                  <TableColumn prefWidth="187.0" text="Address" />
-                  <TableColumn prefWidth="148.0" text="Email" />
-                  <TableColumn prefWidth="110.0" text="Teliphone" />
-                  <TableColumn prefWidth="110.0" text="B'Day" />
-                  <TableColumn prefWidth="77.0" text="Gender" />
-                  <TableColumn prefWidth="77.0" text="Relation" />
-                  <TableColumn prefWidth="77.0" text="E ID" />
-                  <TableColumn prefWidth="77.0" text="Rolle" />
+                <TableColumn fx:id="tmName" prefWidth="181.0" text="Name" />
+                  <TableColumn fx:id="tmAddress" prefWidth="154.0" text="Address" />
+                  <TableColumn fx:id="tmEmail" prefWidth="181.0" text="Email" />
+                  <TableColumn fx:id="tmMobile" prefWidth="141.0" text="Teliphone" />
+                  <TableColumn fx:id="tmBday" prefWidth="133.0" text="B'Day" />
+                  <TableColumn fx:id="tmGender" prefWidth="117.0" text="Gender" />
+                  <TableColumn fx:id="tmRelation" prefWidth="129.0" text="Relation" />
+                  <TableColumn fx:id="tmEid" prefWidth="108.0" text="E ID" />
+                  <TableColumn fx:id="tmRolle" prefWidth="130.0" text="Rolle" />
+                  <TableColumn fx:id="tmDate" prefWidth="112.0" text="Join Date" />
+                  <TableColumn fx:id="tmDepartment" prefWidth="121.0" text="Department" />
+                  <TableColumn fx:id="tmQualification" prefWidth="171.0" text="Professionl Qualification" />
+                  <TableColumn fx:id="tmExperiance" prefWidth="101.0" text="Experience" />
+                  <TableColumn fx:id="tmUniname" prefWidth="172.0" text="University / Institiute Name" />
               </columns>
             </TableView>
             <JFXButton buttonType="RAISED" layoutX="713.0" layoutY="448.0" onAction="#empUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update" />
@@ -209,8 +214,10 @@
             <TextField fx:id="txtUni" layoutX="816.0" layoutY="357.0" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: fff;" />
             <Line endX="135.0" layoutX="669.0" layoutY="152.0" startX="-11.0" />
             <Line endX="135.0" layoutX="669.0" layoutY="206.0" startX="-11.0" />
-            <DatePicker layoutX="916.0" layoutY="135.0" />
-            <ComboBox layoutX="916.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" />
+            <DatePicker fx:id="txtJoinDate" layoutX="916.0" layoutY="135.0" />
+            <ComboBox fx:id="txtDepartment" layoutX="916.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="txtPQ1" layoutX="656.0" layoutY="126.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtPQ11" layoutX="656.0" layoutY="180.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
          </children>
       </Pane>
       <Pane layoutX="-1.0" prefHeight="54.0" prefWidth="1109.0" style="-fx-background-color: #00002e;">
