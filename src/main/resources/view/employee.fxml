@@ -12,29 +12,10 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #dbd9ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeControlleController">
+<AnchorPane prefHeight="760.0" prefWidth="1103.0" style="-fx-background-color: #dbd9ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeControlleController">
    <children>
-      <Pane layoutX="-3.0" prefHeight="683.0" prefWidth="1109.0" style="-fx-background-color: fff;">
+      <Pane layoutX="-1.0" layoutY="52.0" prefHeight="708.0" prefWidth="1109.0" style="-fx-background-color: fff;">
          <children>
-            <Label layoutX="953.0" layoutY="8.0" text="Employee">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="468.0" prefHeight="200.0" prefWidth="1087.0">
-              <columns>
-                <TableColumn fx:id="tmNic" prefWidth="115.0" text="NIC" />
-                <TableColumn prefWidth="181.0" text="Name" />
-                  <TableColumn prefWidth="187.0" text="Address" />
-                  <TableColumn prefWidth="148.0" text="Email" />
-                  <TableColumn prefWidth="110.0" text="Teliphone" />
-                  <TableColumn prefWidth="110.0" text="B'Day" />
-                  <TableColumn prefWidth="77.0" text="Gender" />
-                  <TableColumn prefWidth="77.0" text="Relation" />
-                  <TableColumn prefWidth="77.0" text="E ID" />
-                  <TableColumn prefWidth="77.0" text="Rolle" />
-              </columns>
-            </TableView>
             <Label layoutX="26.0" layoutY="139.0" text="NIC ">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -203,6 +184,39 @@
             <Line endX="169.0" layoutX="917.0" layoutY="298.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="341.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="383.0" startX="-100.0" />
+            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="478.0" prefHeight="167.0" prefWidth="1087.0">
+              <columns>
+                <TableColumn fx:id="tmNic" prefWidth="115.0" text="NIC" />
+                <TableColumn prefWidth="181.0" text="Name" />
+                  <TableColumn prefWidth="187.0" text="Address" />
+                  <TableColumn prefWidth="148.0" text="Email" />
+                  <TableColumn prefWidth="110.0" text="Teliphone" />
+                  <TableColumn prefWidth="110.0" text="B'Day" />
+                  <TableColumn prefWidth="77.0" text="Gender" />
+                  <TableColumn prefWidth="77.0" text="Relation" />
+                  <TableColumn prefWidth="77.0" text="E ID" />
+                  <TableColumn prefWidth="77.0" text="Rolle" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" prefHeight="54.0" prefWidth="1109.0" style="-fx-background-color: #00002e;">
+         <children>
+            <Label layoutX="7.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Chama" textFill="#ff5c00">
+               <font>
+                  <Font name="Corbel Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="102.0" layoutY="13.0" prefHeight="34.0" prefWidth="123.0" text="Computers" textFill="#ff5500b1">
+               <font>
+                  <Font name="Cambria Math" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="976.0" layoutY="10.0" text="Employee" textFill="#ccffff">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
