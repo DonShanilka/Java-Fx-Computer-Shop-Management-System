@@ -3,10 +3,8 @@ package lk.ijse.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.dto.EmployeeDto;
 import lk.ijse.model.EmployeeModel;
@@ -16,23 +14,107 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class EmployeeControlleController {
-    public TextField txtNic;
-    public TableColumn <?,?> tmNic;
-    public TableView <EmployeeTm> employyeTm;
+    @FXML
+    private TableView <EmployeeTm> employyeTm;
+
+    @FXML
+    private TableColumn<?, ?> tmAddress;
+
+    @FXML
+    private TableColumn<?, ?> tmBday;
+
+    @FXML
+    private TableColumn<?, ?> tmDate;
+
+    @FXML
+    private TableColumn<?, ?> tmDepartment;
+
+    @FXML
+    private TableColumn<?, ?> tmEid;
+
+    @FXML
+    private TableColumn<?, ?> tmEmail;
+
+    @FXML
+    private TableColumn<?, ?> tmExperiance;
+
+    @FXML
+    private TableColumn<?, ?> tmGender;
+
+    @FXML
+    private TableColumn<?, ?> tmMobile;
+
+    @FXML
+    private TableColumn<?, ?> tmName;
+
+    @FXML
+    private TableColumn<?, ?> tmNic;
+
+    @FXML
+    private TableColumn<?, ?> tmQualification;
+
+    @FXML
+    private TableColumn<?, ?> tmRelation;
+
+    @FXML
+    private TableColumn<?, ?> tmRolle;
+
+    @FXML
+    private TableColumn<?, ?> tmUniname;
+
+    @FXML
+    private TextField txtAddress;
+
+    @FXML
+    private TextField txtBdaY;
+
+    @FXML
+    private ComboBox<?> txtDepartment;
+
+    @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private TextField txtExpe;
+
+    @FXML
+    private ComboBox<?> txtGebder;
+
+    @FXML
+    private DatePicker txtJoinDate;
+
+    @FXML
+    private TextField txtMobile;
+
+    @FXML
+    private TextField txtName;
+
+    @FXML
+    private TextField txtNic;
+
+    @FXML
+    private TextField txtPQ;
+
+    @FXML
+    private TextField txtPQ1;
+
+    @FXML
+    private TextField txtPQ11;
+
+    @FXML
+    private ComboBox<?> txtRelation;
+
+    @FXML
+    private TextField txtUni;
 
 
-    public void initialize(){
-        loadAllEmployee();
-        setCellValueFactory();
-    }
 
-    private void setCellValueFactory(){
-        tmNic.setCellValueFactory(new PropertyValueFactory<>("nic"));
-    }
-
-    public void empSaveOnAction(ActionEvent actionEvent) {
-
+    @FXML
+    void empSaveOnAction(ActionEvent event) {
         String nic = txtNic.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String
 
         var dto = new EmployeeDto(nic);
 
@@ -46,6 +128,36 @@ public class EmployeeControlleController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    void empUpdateOnAction(ActionEvent event) {
+
+    }
+
+
+    @FXML
+    void empDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void empGetAllAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void empIdQrOnAction(ActionEvent event) {
+
+    }
+
+    public void initialize(){
+        loadAllEmployee();
+        setCellValueFactory();
+    }
+
+    private void setCellValueFactory(){
+        tmNic.setCellValueFactory(new PropertyValueFactory<>("nic"));
     }
 
     public void loadAllEmployee(){
@@ -69,4 +181,7 @@ public class EmployeeControlleController {
 
     }
 
+
+
 }
+

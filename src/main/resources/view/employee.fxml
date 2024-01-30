@@ -162,7 +162,10 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="618.0" layoutY="448.0" onAction="#empSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" layoutX="618.0" layoutY="448.0" onAction="#empSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font></JFXButton>
             <Label layoutX="612.0" layoutY="287.0" text=" ">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -186,7 +189,7 @@
             <Line endX="169.0" layoutX="917.0" layoutY="298.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="341.0" startX="-100.0" />
             <Line endX="169.0" layoutX="917.0" layoutY="383.0" startX="-100.0" />
-            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="506.0" prefHeight="193.0" prefWidth="2067.0">
+            <TableView fx:id="employyeTm" layoutX="11.0" layoutY="506.0" prefHeight="175.0" prefWidth="1089.0">
               <columns>
                 <TableColumn fx:id="tmNic" prefWidth="115.0" text="NIC" />
                 <TableColumn fx:id="tmName" prefWidth="181.0" text="Name" />
@@ -205,10 +208,22 @@
                   <TableColumn fx:id="tmUniname" prefWidth="172.0" text="University / Institiute Name" />
               </columns>
             </TableView>
-            <JFXButton buttonType="RAISED" layoutX="713.0" layoutY="448.0" onAction="#empUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update" />
-            <JFXButton buttonType="RAISED" layoutX="810.0" layoutY="448.0" onAction="#empDeleteOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" layoutX="908.0" layoutY="448.0" onAction="#empGetAllAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #3e30ff;" text="e List" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" layoutX="1003.0" layoutY="448.0" onAction="#empIdQrOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: orange;" text="e Id" />
+            <JFXButton buttonType="RAISED" layoutX="713.0" layoutY="448.0" onAction="#empUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="810.0" layoutY="448.0" onAction="#empDeleteOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="908.0" layoutY="448.0" onAction="#empGetAllAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #3e30ff;" text="e List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="1003.0" layoutY="448.0" onAction="#empIdQrOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: orange;" text="e Id">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
             <TextField fx:id="txtPQ" layoutX="817.0" layoutY="271.0" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: fff;" />
             <TextField fx:id="txtExpe" layoutX="816.0" layoutY="315.0" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: fff;" />
             <TextField fx:id="txtUni" layoutX="816.0" layoutY="357.0" prefHeight="25.0" prefWidth="270.0" style="-fx-background-color: fff;" />
