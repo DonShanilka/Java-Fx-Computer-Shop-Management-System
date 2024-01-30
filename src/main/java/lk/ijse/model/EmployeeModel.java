@@ -15,10 +15,11 @@ public class EmployeeModel {
     public static boolean saveEmp(EmployeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "INSERT INTO employee VALUES(?)";
+        String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, dto.getNic());
+
 
         return pstm.executeUpdate() > 0;
     }

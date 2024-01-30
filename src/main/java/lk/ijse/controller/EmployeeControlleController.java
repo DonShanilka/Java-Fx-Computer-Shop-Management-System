@@ -137,6 +137,8 @@ public class EmployeeControlleController {
 
             if (isSave){
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee Save").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR,"Employee Not Save Something is Worrying");
             }
 
         } catch (SQLException e) {
