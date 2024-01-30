@@ -201,11 +201,12 @@
                   <TableColumn fx:id="tmRelation" prefWidth="129.0" text="Relation" />
                   <TableColumn fx:id="tmEid" prefWidth="108.0" text="E ID" />
                   <TableColumn fx:id="tmRolle" prefWidth="130.0" text="Rolle" />
-                  <TableColumn fx:id="tmDate" prefWidth="112.0" text="Join Date" />
-                  <TableColumn fx:id="tmDepartment" prefWidth="121.0" text="Department" />
-                  <TableColumn fx:id="tmQualification" prefWidth="171.0" text="Professionl Qualification" />
-                  <TableColumn fx:id="tmExperiance" prefWidth="101.0" text="Experience" />
-                  <TableColumn fx:id="tmUniname" prefWidth="172.0" text="University / Institiute Name" />
+                  <TableColumn fx:id="tmDate" prefWidth="184.0" text="Join Date" />
+                  <TableColumn fx:id="tmDepartment" prefWidth="153.0" text="Department" />
+                  <TableColumn fx:id="tmQualification" prefWidth="202.0" text="Professionl Qualification" />
+                  <TableColumn fx:id="tmExperiance" prefWidth="168.0" text="Experience" />
+                  <TableColumn fx:id="tmUniname" prefWidth="211.0" text="University / Institiute Name" />
+                  <TableColumn fx:id="tmNation" prefWidth="128.0" text="Nation" />
               </columns>
             </TableView>
             <JFXButton buttonType="RAISED" layoutX="713.0" layoutY="448.0" onAction="#empUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update">

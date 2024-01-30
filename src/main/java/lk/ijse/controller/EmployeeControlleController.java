@@ -4,112 +4,89 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.dto.EmployeeDto;
 import lk.ijse.model.EmployeeModel;
 import lk.ijse.tm.EmployeeTm;
 
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class EmployeeControlleController {
+public class EmployeeControlleController implements Initializable {
     @FXML
     public TextField txtNation;
     @FXML
+    public TableColumn<?,?> tmNation;
+    @FXML
     private TableView <EmployeeTm> employyeTm;
-
     @FXML
     private TableColumn<?, ?> tmAddress;
-
     @FXML
     private TableColumn<?, ?> tmBday;
-
     @FXML
     private TableColumn<?, ?> tmDate;
-
     @FXML
     private TableColumn<?, ?> tmDepartment;
-
     @FXML
     private TableColumn<?, ?> tmEid;
-
     @FXML
     private TableColumn<?, ?> tmEmail;
-
     @FXML
     private TableColumn<?, ?> tmExperiance;
-
     @FXML
     private TableColumn<?, ?> tmGender;
-
     @FXML
     private TableColumn<?, ?> tmMobile;
-
     @FXML
     private TableColumn<?, ?> tmName;
-
     @FXML
     private TableColumn<?, ?> tmNic;
-
     @FXML
     private TableColumn<?, ?> tmQualification;
-
     @FXML
     private TableColumn<?, ?> tmRelation;
-
     @FXML
     private TableColumn<?, ?> tmRolle;
-
     @FXML
     private TableColumn<?, ?> tmUniname;
-
     @FXML
     private TextField txtAddress;
-
     @FXML
     private TextField txtBdaY;
-
     @FXML
-    private ComboBox<?> txtDepartment;
-
+    private ComboBox<String > txtDepartment;
     @FXML
     private TextField txtEmail;
-
     @FXML
     private TextField txtExpe;
-
     @FXML
-    private ComboBox<?> txtGebder;
-
+    private ComboBox<String> txtGebder;
     @FXML
     private DatePicker txtJoinDate;
-
     @FXML
     private TextField txtMobile;
-
     @FXML
     private TextField txtName;
-
     @FXML
     private TextField txtNic;
-
     @FXML
     private TextField txtPQ;
-
     @FXML
     private TextField txteId;
-
     @FXML
     private TextField txtRolle;
-
     @FXML
-    private ComboBox<?> txtRelation;
-
+    private ComboBox<String> txtRelation;
     @FXML
     private TextField txtUni;
 
-
+    private String[] gen = {"Male", "FeMale"};
+    private String[] rel = {"Marriage", "UnMarriage"};
+    private String[] dep = {"HR", "Finance & Accounting", "Service", "IT"};
 
     @FXML
     void empSaveOnAction(ActionEvent event) {
@@ -119,13 +96,13 @@ public class EmployeeControlleController {
         String email = txtEmail.getText();
         String mobile = txtMobile.getText();
         String bDate = txtBdaY.getText();
-        String gender = (String) txtGebder.getValue();
+        String gender = txtGebder.getValue();
         String nation = txtNation.getText();
-        String relation = (String) txtRelation.getValue();
+        String relation = txtRelation.getValue();
         String eId = txteId.getText();
         String rolle = txtRolle.getText();
         String jDate = String.valueOf(txtJoinDate.getValue());
-        String depart = (String) txtDepartment.getValue();
+        String depart = txtDepartment.getValue();
         String pQ = txtPQ.getText();
         String experiance = txtExpe.getText();
         String uni = txtUni.getText();
@@ -167,13 +144,25 @@ public class EmployeeControlleController {
 
     }
 
-    public void initialize(){
-        loadAllEmployee();
-        setCellValueFactory();
-    }
 
     private void setCellValueFactory(){
         tmNic.setCellValueFactory(new PropertyValueFactory<>("nic"));
+        tmName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tmAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        tmEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        tmMobile.setCellValueFactory(new PropertyValueFactory<>("mobile"));
+        tmBday.setCellValueFactory(new PropertyValueFactory<>("bDate"));
+        tmGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        tmNation.setCellValueFactory(new PropertyValueFactory<>("nation"));
+        tmRelation.setCellValueFactory(new PropertyValueFactory<>("relation"));
+        tmEid.setCellValueFactory(new PropertyValueFactory<>("eId"));
+        tmRolle.setCellValueFactory(new PropertyValueFactory<>("rolle"));
+        tmDate.setCellValueFactory(new PropertyValueFactory<>("jDate"));
+        tmDepartment.setCellValueFactory(new PropertyValueFactory<>("depart"));
+        tmQualification.setCellValueFactory(new PropertyValueFactory<>("pQ"));
+        tmExperiance.setCellValueFactory(new PropertyValueFactory<>("experiance"));
+        tmUniname.setCellValueFactory(new PropertyValueFactory<>("uni"));
+
     }
 
     public void loadAllEmployee(){
@@ -213,6 +202,15 @@ public class EmployeeControlleController {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        txtGebder.getItems().addAll(gen);
+        txtRelation.getItems().addAll(rel);
+        txtDepartment.getItems().addAll(dep);
+        loadAllEmployee();
+        setCellValueFactory();
+
+    }
 }
 

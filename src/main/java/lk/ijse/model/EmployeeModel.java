@@ -3,10 +3,7 @@ package lk.ijse.model;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.EmployeeDto;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +23,7 @@ public class EmployeeModel {
         pstm.setString(6, dto.getBDate());
         pstm.setString(7, dto.getGender());
         pstm.setString(8, dto.getNation());
-        pstm.setString(8, dto.getRelation());
+        pstm.setString(9, dto.getRelation());
         pstm.setString(10, dto.getEId());
         pstm.setString(11, dto.getRolle());
         pstm.setString(12, dto.getJDate());
