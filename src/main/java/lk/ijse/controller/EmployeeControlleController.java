@@ -15,6 +15,8 @@ import java.util.List;
 
 public class EmployeeControlleController {
     @FXML
+    public TextField txtNation;
+    @FXML
     private TableView <EmployeeTm> employyeTm;
 
     @FXML
@@ -96,10 +98,10 @@ public class EmployeeControlleController {
     private TextField txtPQ;
 
     @FXML
-    private TextField txtPQ1;
+    private TextField txteId;
 
     @FXML
-    private TextField txtPQ11;
+    private TextField txtRolle;
 
     @FXML
     private ComboBox<?> txtRelation;
@@ -114,9 +116,21 @@ public class EmployeeControlleController {
         String nic = txtNic.getText();
         String name = txtName.getText();
         String address = txtAddress.getText();
-        String
+        String email = txtEmail.getText();
+        String mobile = txtMobile.getText();
+        String bDate = txtBdaY.getText();
+        String gender = (String) txtGebder.getValue();
+        String nation = txtNation.getText();
+        String relation = (String) txtRelation.getValue();
+        String eId = txteId.getText();
+        String rolle = txtRolle.getText();
+        String jDate = String.valueOf(txtJoinDate.getValue());
+        String depart = (String) txtDepartment.getValue();
+        String pQ = txtPQ.getText();
+        String experiance = txtExpe.getText();
+        String uni = txtUni.getText();
 
-        var dto = new EmployeeDto(nic);
+        var dto = new EmployeeDto(nic,name,address,email,mobile,bDate,gender,nation,relation,eId,rolle,jDate,depart,pQ,experiance,uni);
 
         try {
             boolean isSave = EmployeeModel.saveEmp(dto);

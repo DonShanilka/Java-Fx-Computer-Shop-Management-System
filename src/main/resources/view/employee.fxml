@@ -53,7 +53,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="305.0" layoutY="193.0" text="Email ">
+            <Label layoutX="305.0" layoutY="193.0" text="Natio">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -63,8 +63,8 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="22.0" layoutY="92.0" stroke="#3e30ff" strokeType="INSIDE" width="540.0" />
-            <Label layoutX="249.0" layoutY="95.0" text="Personal Details" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="22.0" layoutY="92.0" stroke="#3e30ff" strokeType="INSIDE" width="547.0" />
+            <Label layoutX="271.0" layoutY="95.0" text="Personal Details" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -107,7 +107,7 @@
             <TextField fx:id="txtMobile" layoutX="117.0" layoutY="330.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField fx:id="txtBdaY" layoutX="117.0" layoutY="378.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <TextField fx:id="txtName" layoutX="117.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
-            <TextField fx:id="txtEmail" layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtNation" layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: fff;" />
             <ComboBox fx:id="txtGebder" layoutX="391.0" layoutY="135.0" prefHeight="25.0" prefWidth="174.0" />
             <ComboBox fx:id="txtRelation" layoutX="391.0" layoutY="234.0" prefHeight="25.0" prefWidth="174.0" />
             <Label layoutX="109.0" layoutY="139.0" text=":">
@@ -231,8 +231,8 @@
             <Line endX="135.0" layoutX="669.0" layoutY="206.0" startX="-11.0" />
             <DatePicker fx:id="txtJoinDate" layoutX="916.0" layoutY="135.0" />
             <ComboBox fx:id="txtDepartment" layoutX="916.0" layoutY="186.0" prefHeight="25.0" prefWidth="174.0" />
-            <TextField fx:id="txtPQ1" layoutX="656.0" layoutY="126.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
-            <TextField fx:id="txtPQ11" layoutX="656.0" layoutY="180.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txteId" layoutX="656.0" layoutY="126.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtRolle" layoutX="656.0" layoutY="180.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: fff;" />
          </children>
       </Pane>
       <Pane layoutX="-1.0" prefHeight="54.0" prefWidth="1109.0" style="-fx-background-color: #00002e;">
