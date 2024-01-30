@@ -184,7 +184,22 @@ public class EmployeeControlleController {
 
             for (EmployeeDto dto : dtoList){
                 obList.add(new EmployeeTm(
-                        dto.getNic()
+                        dto.getNic(),
+                        dto.getName(),
+                        dto.getAddress(),
+                        dto.getEmail(),
+                        dto.getMobile(),
+                        dto.getBDate(),
+                        dto.getGender(),
+                        dto.getNation(),
+                        dto.getRelation(),
+                        dto.getEId(),
+                        dto.getRolle(),
+                        dto.getJDate(),
+                        dto.getDepart(),
+                        dto.getPQ(),
+                        dto.getExperiance(),
+                        dto.getUni()
                 ));
             }
 
