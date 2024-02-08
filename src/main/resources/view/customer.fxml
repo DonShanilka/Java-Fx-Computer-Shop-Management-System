@@ -69,13 +69,13 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1103.0" />
       <TableView layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1430.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="610.0" text="C2" />
+          <TableColumn prefWidth="135.0" text="NIC" />
+          <TableColumn prefWidth="185.0" text="Name" />
+            <TableColumn prefWidth="167.0" text="Address" />
+            <TableColumn prefWidth="125.0" text="Teliphone" />
+            <TableColumn prefWidth="127.0" text="Date" />
+            <TableColumn prefWidth="180.0" text="Item Catagory" />
+            <TableColumn prefWidth="141.0" text="Product Name" />
             <TableColumn prefWidth="138.0" text="Type" />
             <TableColumn prefWidth="104.0" text="Method" />
             <TableColumn prefWidth="127.0" text="Amount" />
