@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -62,5 +63,30 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
+      <JFXButton buttonType="RAISED" layoutX="626.0" layoutY="408.0" onAction="#empSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="721.0" layoutY="408.0" onAction="#empUpdateOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="818.0" layoutY="408.0" onAction="#empDeleteOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="916.0" layoutY="408.0" onAction="#empGetAllAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #3e30ff;" text="e List" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1011.0" layoutY="408.0" onAction="#empIdQrOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: orange;" text="e Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
