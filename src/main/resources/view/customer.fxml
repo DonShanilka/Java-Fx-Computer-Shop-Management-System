@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerController">
    <children>
-      <Pane layoutX="16.0" layoutY="69.0" prefHeight="303.0" prefWidth="1072.0" style="-fx-background-color: fff;" />
+      <Pane layoutX="16.0" layoutY="69.0" prefHeight="303.0" prefWidth="1072.0" style="-fx-background-color: fff;">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="NIC :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="77.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="135.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="195.0" text="Teliphone :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="249.0" text="Date :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="425.0" layoutY="25.0" text="Payment Method :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="425.0" layoutY="77.0" text="Amount :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="425.0" layoutY="135.0" text="Item Catagory :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1103.0" />
       <TableView layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1072.0">
         <columns>
@@ -17,5 +63,25 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
+      <JFXButton layoutX="997.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #66ff66;" text="ADD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="692.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #4d94ff;" text="List">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="797.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #ff5050;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="899.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #ff9966;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
