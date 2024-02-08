@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -63,25 +62,5 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <JFXButton layoutX="997.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #66ff66;" text="ADD">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="692.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #4d94ff;" text="List">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="797.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #ff5050;" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="899.0" layoutY="387.0" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: #ff9966;" text="Update">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </JFXButton>
    </children>
 </AnchorPane>
