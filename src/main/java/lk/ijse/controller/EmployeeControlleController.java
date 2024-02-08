@@ -131,7 +131,9 @@ public class EmployeeControlleController implements Initializable {
 
     @FXML
     void empDeleteOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
 
+        var dto = new EmployeeDto(nic);
     }
 
     @FXML

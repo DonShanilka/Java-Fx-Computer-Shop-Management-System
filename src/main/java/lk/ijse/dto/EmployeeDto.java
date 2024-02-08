@@ -27,4 +27,7 @@ public class EmployeeDto {
     private String experiance;
     private String uni;
 
+    public EmployeeDto(String nic) {
+        this.nic = nic;
+    }
 }
