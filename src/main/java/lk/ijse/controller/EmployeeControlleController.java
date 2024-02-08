@@ -130,10 +130,24 @@ public class EmployeeControlleController implements Initializable {
 
 
     @FXML
-    void empDeleteOnAction(ActionEvent event) {
+    void empDeleteOnAction(ActionEvent event) throws SQLException {
         String nic = txtNic.getText();
 
         var dto = new EmployeeDto(nic);
+
+        try {
+            boolean isDelete = EmployeeModel.deleteEmployee(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Employee Deleted");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Employee Not Delete");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @FXML
