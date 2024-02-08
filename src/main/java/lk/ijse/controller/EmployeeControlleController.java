@@ -198,10 +198,9 @@ public class EmployeeControlleController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
-
+    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

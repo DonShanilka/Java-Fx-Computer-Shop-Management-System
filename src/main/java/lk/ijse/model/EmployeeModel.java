@@ -70,4 +70,14 @@ public class EmployeeModel {
         return empList;
     }
 
+    public static boolean deleteEmployee(EmployeeDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM employee WHERE nic = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1 , dto.getNic());
+
+        return pstm.executeUpdate() > 0;
+    }
+
 }
