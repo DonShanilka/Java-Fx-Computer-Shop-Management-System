@@ -44,17 +44,22 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="425.0" layoutY="77.0" text="Amount :">
+            <Label layoutX="425.0" layoutY="135.0" text="Amount :">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="425.0" layoutY="135.0" text="Item Catagory :">
+            <Label layoutX="426.0" layoutY="194.0" text="Item Catagory :">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="424.0" layoutY="195.0" text="Product Name :">
+            <Label layoutX="425.0" layoutY="254.0" text="Product Name :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="425.0" layoutY="77.0" text="Payment Type :">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -62,10 +67,18 @@
          </children>
       </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1103.0" />
-      <TableView layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1072.0">
+      <TableView layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1430.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="610.0" text="C2" />
+            <TableColumn prefWidth="138.0" text="Type" />
+            <TableColumn prefWidth="104.0" text="Method" />
+            <TableColumn prefWidth="127.0" text="Amount" />
         </columns>
       </TableView>
       <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="408.0" onAction="#customerSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE">
