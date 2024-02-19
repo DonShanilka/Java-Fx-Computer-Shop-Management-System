@@ -103,7 +103,7 @@ public class EmployeeModel {
         pstm.setString(15,dto.getUni());
         pstm.setString(16,dto.getNic());
 
-        return pstm.executeUpdate() >0;
+        return pstm.executeUpdate() > 0;
 
     }
 

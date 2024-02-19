@@ -88,6 +88,8 @@ public class EmployeeControlleController implements Initializable {
     private String[] rel = {"Marriage", "UnMarriage"};
     private String[] dep = {"HR", "Finance & Accounting", "Service", "IT"};
 
+    EmployeeModel employeeModel = new EmployeeModel();
+
     @FXML
     void empSaveOnAction(ActionEvent event) {
         String nic = txtNic.getText();
@@ -125,6 +127,37 @@ public class EmployeeControlleController implements Initializable {
 
     @FXML
     void empUpdateOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String email = txtEmail.getText();
+        String mobile = txtMobile.getText();
+        String bDate = txtBdaY.getText();
+        String gender = txtGebder.getValue();
+        String nation = txtNation.getText();
+        String relation = txtRelation.getValue();
+        String eId = txteId.getText();
+        String rolle = txtRolle.getText();
+        String jDate = String.valueOf(txtJoinDate.getValue());
+        String depart = txtDepartment.getValue();
+        String pQ = txtPQ.getText();
+        String experiance = txtExpe.getText();
+        String uni = txtUni.getText();
+
+        var dto = new EmployeeDto(nic,name,address,email,mobile,bDate,gender,nation,relation,eId,rolle,jDate,depart,pQ,experiance,uni);
+
+        try{
+            boolean isUpdate = EmployeeModel.updateEmployee(dto);
+
+            if(isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION);
+            } else {
+                new Alert(Alert.AlertType.ERROR);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
