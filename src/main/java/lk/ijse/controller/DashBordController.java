@@ -18,35 +18,39 @@ public class DashBordController {
     public JFXButton home;
     public JFXButton item;
 
-    void setForm(String form) throws IOException {
-        String[] formArray = {"/view/customer.fxml", "/view/employee.fxml", "/view/AddItem.fxml", "/view/AddSupplier.fxml","/view/Salary.fxml" , "/view/monthlyincome.fxml","/view/Attendance.fxml","/view/Cashier.fxml"};
+    public void initialize() throws IOException {
+        //homeOnAction(null);
+    }
 
-        JFXButton[] btnArray = {customer,employee,home,item};
+    void setForm(String form) throws IOException {
+        String[] formArray = {"/view/customer.fxml", "/view/employee.fxml", "/view/income.fxml"};
+
+        JFXButton[] btnArray = {customer,employee,home};
         AnchorPane load = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(form)));
         root1.getChildren().clear();
         root1.getChildren().add(load);
         for (int i = 0; i < formArray.length; i++) {
-            btnArray[i].setStyle("/*-fx-background-color:  #ffffff;*/ -fx-font-size: 22; /*-fx-text-fill: #202A44FF*/");
+            btnArray[i].setStyle("-fx-background-color:  #ffffff; -fx-font-size: 22; -fx-text-fill: #000f69");
 
             if (form.equals(formArray[i])){
-                btnArray[i].setStyle("-fx-background-color: #00bd1f; -fx-font-size: 22; -fx-text-fill: #000000");
+                btnArray[i].setStyle("-fx-background-color: #000f69; -fx-font-size: 22; -fx-text-fill: #ffffff");
             }
         }
     }
 
     @FXML
-    void customerOnAction(ActionEvent event) {
-
+    void customerOnAction(ActionEvent event) throws IOException {
+        setForm("/view/customer.fxml");
     }
 
     @FXML
-    void employeeOnAction(ActionEvent event) {
-
+    void employeeOnAction(ActionEvent event) throws IOException {
+        setForm("/view/employee.fxml");
     }
 
     @FXML
-    void homeOnAction(ActionEvent event) {
-
+    void homeOnAction(ActionEvent event) throws IOException {
+        setForm("/view/income.fxml");
     }
 
     @FXML
