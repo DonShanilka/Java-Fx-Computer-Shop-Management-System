@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerController">
    <children>
@@ -64,24 +67,40 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <TextField fx:id="txtNic" layoutX="94.0" layoutY="21.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: ffff;" />
+            <TextField fx:id="txtName" layoutX="94.0" layoutY="73.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: fff;" />
+            <TextField fx:id="txtAddress" layoutX="94.0" layoutY="131.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: ffff;" />
+            <TextField fx:id="txtMobile" layoutX="94.0" layoutY="190.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: ffff;" />
+            <TextField fx:id="txtAmount" layoutX="536.0" layoutY="131.0" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: fff;" />
+            <DatePicker layoutX="94.0" layoutY="250.0" prefHeight="25.0" prefWidth="223.0" />
+            <JFXComboBox fx:id="txtPaymentMethod" layoutX="536.0" layoutY="21.0" prefHeight="25.0" prefWidth="223.0" />
+            <JFXComboBox fx:id="txtPaymentType" layoutX="536.0" layoutY="73.0" prefHeight="25.0" prefWidth="223.0" />
+            <JFXComboBox fx:id="txtItemCatagory" layoutX="536.0" layoutY="190.0" prefHeight="25.0" prefWidth="223.0" />
+            <TextField fx:id="txtProductName" layoutX="536.0" layoutY="250.0" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: ffff;" />
+            <Line endX="124.0" layoutX="195.0" layoutY="47.0" startX="-100.0" />
+            <Line endX="124.0" layoutX="194.0" layoutY="98.0" startX="-100.0" />
+            <Line endX="124.0" layoutX="195.0" layoutY="157.0" startX="-100.0" />
+            <Line endX="124.0" layoutX="195.0" layoutY="215.0" startX="-100.0" />
+            <Line endX="124.0" layoutX="638.0" layoutY="157.0" startX="-100.0" />
+            <Line endX="124.0" layoutX="638.0" layoutY="276.0" startX="-100.0" />
          </children>
       </Pane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1103.0" />
-      <TableView layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1430.0">
+      <TableView fx:id="customerTm" layoutX="16.0" layoutY="449.0" prefHeight="219.0" prefWidth="1072.0">
         <columns>
-          <TableColumn prefWidth="135.0" text="NIC" />
-          <TableColumn prefWidth="185.0" text="Name" />
-            <TableColumn prefWidth="167.0" text="Address" />
-            <TableColumn prefWidth="125.0" text="Teliphone" />
-            <TableColumn prefWidth="127.0" text="Date" />
-            <TableColumn prefWidth="180.0" text="Item Catagory" />
-            <TableColumn prefWidth="141.0" text="Product Name" />
-            <TableColumn prefWidth="138.0" text="Type" />
-            <TableColumn prefWidth="104.0" text="Method" />
-            <TableColumn prefWidth="127.0" text="Amount" />
+          <TableColumn fx:id="tmNic" prefWidth="135.0" text="NIC" />
+          <TableColumn fx:id="tmName" prefWidth="185.0" text="Name" />
+            <TableColumn fx:id="tmAddress" prefWidth="167.0" text="Address" />
+            <TableColumn fx:id="tmMobile" prefWidth="125.0" text="Teliphone" />
+            <TableColumn fx:id="tmDate" prefWidth="127.0" text="Date" />
+            <TableColumn fx:id="tmCatogory" prefWidth="180.0" text="Item Catagory" />
+            <TableColumn fx:id="tmProductName" prefWidth="141.0" text="Product Name" />
+            <TableColumn fx:id="tmType" prefWidth="138.0" text="Type" />
+            <TableColumn fx:id="tmMethod" prefWidth="104.0" text="Method" />
+            <TableColumn fx:id="tmAmount" prefWidth="127.0" text="Amount" />
         </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="408.0" onAction="#customerSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="722.0" layoutY="408.0" onAction="#customerSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: Green;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
@@ -96,10 +115,15 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="723.0" layoutY="408.0" onAction="#customerListOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #3e30ff;" text="C List" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="1010.0" layoutY="408.0" onAction="#customerListOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #3e30ff;" text="C List" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
+      <Label layoutX="900.0" layoutY="7.0" text="Customer Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
