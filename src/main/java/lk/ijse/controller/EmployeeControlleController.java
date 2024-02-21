@@ -280,24 +280,25 @@ public class EmployeeControlleController implements Initializable {
         txtNic.setText("");
         txtName.setText("");
         txtAddress.setText("");
-        txtEmail.setText(row.getEmail());
-        txtMobile.setText(row.getMobile());
-        txtBdaY.setText(row.getBDate());
-        txtGebder.setValue(row.getGender());
-        txtNation.setText(row.getNation());
-        txtRelation.setValue(row.getRelation());
-        txteId.setText(row.getEId());
-        txtRolle.setText(row.getRolle());
-        txtJoinDate.setUserData(row.getJDate());
-        txtDepartment.setValue(row.getDepart());
-        txtPQ.setText(row.getPQ());
-        txtExpe.setText(row.getExperiance());
-        txtUni.setText(row.getUni());
+        txtEmail.setText("");
+        txtMobile.setText("");
+        txtBdaY.setText("");
+        txtGebder.setValue("");
+        txtNation.setText("");
+        txtRelation.setValue("");
+        txteId.setText("");
+        txtRolle.setText("");
+        txtJoinDate.setUserData("");
+        txtDepartment.setValue("");
+        txtPQ.setText("");
+        txtExpe.setText("");
+        txtUni.setText("");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        clearfield();
         tableListener();
         txtGebder.getItems().addAll(gen);
         txtRelation.getItems().addAll(rel);
