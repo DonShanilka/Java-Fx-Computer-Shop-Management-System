@@ -28,4 +28,15 @@ public class CustomerModel {
 
         return pstm.executeUpdate() > 0;
     }
+
+    public static boolean deleteCustomer(CustomerDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM customer WHERE nic=?";
+        PreparedStatement  pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getNic());
+
+        return pstm.executeUpdate() >0;
+    }
 }
