@@ -3,11 +3,15 @@ package lk.ijse.controller;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class CustomerController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class CustomerController implements Initializable {
 
     @FXML
     private TableView<?> customerTm;
@@ -61,13 +65,16 @@ public class CustomerController {
     private TextField txtNic;
 
     @FXML
-    private JFXComboBox<?> txtPaymentMethod;
+    private JFXComboBox<String> txtPaymentMethod;
 
     @FXML
-    private JFXComboBox<?> txtPaymentType;
+    private JFXComboBox<String> txtPaymentType;
 
     @FXML
     private TextField txtProductName;
+
+    private String[] pM = {"Credit Card", "Debit Card", "Cash", "Bank Transfer"};
+    private String[] pT = {"On Time", "Installments"};
 
     @FXML
     void customerDeleteOnAction(ActionEvent event) {
@@ -89,6 +96,9 @@ public class CustomerController {
 
     }
 
-
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txtPaymentMethod.getItems().addAll(pM);
+        txtPaymentType.getItems().addAll(pT);
+    }
 }
