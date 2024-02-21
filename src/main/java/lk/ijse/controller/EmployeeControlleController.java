@@ -116,6 +116,7 @@ public class EmployeeControlleController implements Initializable {
 
             if (isSave){
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee Save").show();
+                clearfield();
             } else {
                 new Alert(Alert.AlertType.ERROR,"Employee Not Save Something is Worrying");
             }
@@ -151,6 +152,7 @@ public class EmployeeControlleController implements Initializable {
 
             if(isUpdate){
                 new Alert(Alert.AlertType.CONFIRMATION);
+                clearfield();
             } else {
                 new Alert(Alert.AlertType.ERROR);
             }
@@ -173,6 +175,7 @@ public class EmployeeControlleController implements Initializable {
 
             if (isDelete){
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee Deleted");
+                clearfield();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Employee Not Delete");
             }
@@ -293,6 +296,7 @@ public class EmployeeControlleController implements Initializable {
         txtPQ.setText("");
         txtExpe.setText("");
         txtUni.setText("");
+
     }
 
     @Override
