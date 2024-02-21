@@ -249,6 +249,13 @@ public class EmployeeControlleController implements Initializable {
         }
     }
 
+    private void tableListener() {
+        employyeTm.getSelectionModel().selectedItemProperty().addListener((observable, oldValued, newValue) -> {
+//            System.out.println(newValue);
+            setData(newValue);
+        });
+    }
+
     public void setData(EmployeeTm row){
         txtNic.setText(row.getNic());
         txtName.setText(row.getName());
@@ -273,6 +280,7 @@ public class EmployeeControlleController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        tableListener();
         txtGebder.getItems().addAll(gen);
         txtRelation.getItems().addAll(rel);
         txtDepartment.getItems().addAll(dep);
