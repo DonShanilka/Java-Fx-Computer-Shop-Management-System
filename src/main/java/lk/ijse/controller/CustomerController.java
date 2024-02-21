@@ -122,6 +122,31 @@ public class CustomerController implements Initializable {
 
     @FXML
     void customerUpdateOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String mobile = txtMobile.getText();
+        String date = String.valueOf(txtDate.getValue());
+        String pyM = txtPaymentMethod.getValue();
+        String pyT = txtPaymentType.getValue();
+        String amount = txtAmount.getText();
+        String catogary = txtItemCatagory.getValue();
+        String prName = txtProductName.getText();
+
+        var dto = new CustomerDto(nic,name,address,mobile,date,pyM,pyT,amount,catogary,prName);
+
+        try{
+            boolean isUpdate = CustomerModel.updateCustomer(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION, "Update Customer");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Customer Not Update");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
