@@ -249,6 +249,15 @@ public class EmployeeControlleController implements Initializable {
         }
     }
 
+    public void setData(EmployeeTm row){
+        txtNic.setText(row.getNic());
+        txtName.setText(row.getName());
+        txtAddress.setText(row.getAddress());
+        txtEmail.setText(row.getEmail());
+        txtMobile.setText(row.getMobile());
+        txtBdaY.setText(row.getBDate());
+    }
+
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
