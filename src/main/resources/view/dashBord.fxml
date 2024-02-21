@@ -24,28 +24,28 @@
                   </Label>
                </children>
             </Pane>
-            <JFXButton layoutY="46.0" prefHeight="36.0" prefWidth="145.0" text="Home" textFill="WHITE">
+            <JFXButton alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutY="46.0" onAction="#homeOnAction" prefHeight="36.0" prefWidth="248.0" text="Home" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutY="82.0" prefHeight="36.0" prefWidth="145.0" text="      Employee" textFill="WHITE">
+            <JFXButton alignment="BOTTOM_LEFT" layoutY="82.0" onAction="#employeeOnAction" prefHeight="36.0" prefWidth="248.0" text="Employee" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="22.0" layoutY="118.0" prefHeight="36.0" prefWidth="123.0" text="Customer" textFill="WHITE">
+            <JFXButton alignment="BOTTOM_LEFT" layoutY="118.0" onAction="#customerOnAction" prefHeight="36.0" prefWidth="248.0" text="Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutY="154.0" prefHeight="36.0" prefWidth="131.0" text="Item" textFill="WHITE">
+            <JFXButton alignment="BOTTOM_LEFT" layoutY="154.0" onAction="#itemOnAction" prefHeight="36.0" prefWidth="248.0" text="Item" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
          </children>
       </Pane>
-      <AnchorPane layoutX="248.0" prefHeight="760.0" prefWidth="1119.0" style="-fx-background-color: #dbd9ff;" />
+      <AnchorPane fx:id="root1" layoutX="248.0" prefHeight="760.0" prefWidth="1119.0" style="-fx-background-color: #dbd9ff;" />
    </children>
 </AnchorPane>
