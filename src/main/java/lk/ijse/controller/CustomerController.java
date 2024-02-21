@@ -83,6 +83,22 @@ public class CustomerController implements Initializable {
 
     @FXML
     void customerDeleteOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+
+        var dto = new CustomerDto();
+
+        try{
+            boolean isDelete = CustomerModel.deleteCustomer(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Customer is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Customer is Not Delete");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
