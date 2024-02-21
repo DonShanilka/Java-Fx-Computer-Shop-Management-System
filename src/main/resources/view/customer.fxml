@@ -72,7 +72,7 @@
             <TextField fx:id="txtAddress" layoutX="94.0" layoutY="131.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: ffff;" />
             <TextField fx:id="txtMobile" layoutX="94.0" layoutY="190.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: ffff;" />
             <TextField fx:id="txtAmount" layoutX="536.0" layoutY="131.0" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: fff;" />
-            <DatePicker layoutX="94.0" layoutY="250.0" prefHeight="25.0" prefWidth="223.0" />
+            <DatePicker fx:id="txtDate" layoutX="94.0" layoutY="250.0" prefHeight="25.0" prefWidth="223.0" />
             <JFXComboBox fx:id="txtPaymentMethod" layoutX="536.0" layoutY="21.0" prefHeight="25.0" prefWidth="223.0" />
             <JFXComboBox fx:id="txtPaymentType" layoutX="536.0" layoutY="73.0" prefHeight="25.0" prefWidth="223.0" />
             <JFXComboBox fx:id="txtItemCatagory" layoutX="536.0" layoutY="190.0" prefHeight="25.0" prefWidth="223.0" />

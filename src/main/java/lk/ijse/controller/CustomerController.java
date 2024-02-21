@@ -4,11 +4,12 @@ import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import lk.ijse.dto.CustomerDto;
+import lk.ijse.model.CustomerModel;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
@@ -73,6 +74,9 @@ public class CustomerController implements Initializable {
     @FXML
     private TextField txtProductName;
 
+    @FXML
+    private DatePicker txtDate;
+
     private String[] pM = {"Credit Card", "Debit Card", "Cash", "Bank Transfer"};
     private String[] pT = {"On Time", "Installments"};
     private String[] cat = {"LapTop", "DescTop", "Chairs & Table", "Parts", "Accessory"};
@@ -89,7 +93,31 @@ public class CustomerController implements Initializable {
 
     @FXML
     void customerSaveOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String mobile = txtMobile.getText();
+        String date = String.valueOf(txtDate.getValue());
+        String pyM = txtPaymentMethod.getValue();
+        String pyT = txtPaymentType.getValue();
+        String amount = txtAmount.getText();
+        String catogary = txtItemCatagory.getValue();
+        String prName = txtProductName.getText();
 
+        var dto = new CustomerDto(nic,name,address,mobile,date,pyM,pyT,amount,catogary,prName);
+
+        try{
+            boolean isSave = CustomerModel.saveCustomer(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION, "Customer is Save");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Customer is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
