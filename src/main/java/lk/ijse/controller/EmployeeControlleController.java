@@ -263,7 +263,9 @@ public class EmployeeControlleController implements Initializable {
         txtRolle.setText(row.getRolle());
         txtJoinDate.setUserData(row.getJDate());
         txtDepartment.setValue(row.getDepart());
-
+        txtPQ.setText(row.getPQ());
+        txtExpe.setText(row.getExperiance());
+        txtUni.setText(row.getUni());
 
     }
 
