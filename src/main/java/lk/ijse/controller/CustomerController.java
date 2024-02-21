@@ -53,7 +53,7 @@ public class CustomerController implements Initializable {
     private TextField txtAmount;
 
     @FXML
-    private JFXComboBox<?> txtItemCatagory;
+    private JFXComboBox<String> txtItemCatagory;
 
     @FXML
     private TextField txtMobile;
@@ -75,6 +75,7 @@ public class CustomerController implements Initializable {
 
     private String[] pM = {"Credit Card", "Debit Card", "Cash", "Bank Transfer"};
     private String[] pT = {"On Time", "Installments"};
+    private String[] cat = {"LapTop", "DescTop", "Chairs & Table", "Parts", "Accessory"};
 
     @FXML
     void customerDeleteOnAction(ActionEvent event) {
@@ -100,5 +101,6 @@ public class CustomerController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         txtPaymentMethod.getItems().addAll(pM);
         txtPaymentType.getItems().addAll(pT);
+        txtItemCatagory.getItems().addAll(cat);
     }
 }
