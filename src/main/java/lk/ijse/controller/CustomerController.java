@@ -85,7 +85,7 @@ public class CustomerController implements Initializable {
     void customerDeleteOnAction(ActionEvent event) {
         String nic = txtNic.getText();
 
-        var dto = new CustomerDto();
+        var dto = new CustomerDto(nic);
 
         try{
             boolean isDelete = CustomerModel.deleteCustomer(dto);

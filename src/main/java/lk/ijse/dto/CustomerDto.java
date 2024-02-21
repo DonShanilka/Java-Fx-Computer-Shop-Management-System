@@ -20,4 +20,7 @@ public class CustomerDto {
     private String item_cat;
     private String product_name;
 
+    public CustomerDto(String nic) {
+        this.nic = nic;
+    }
 }
