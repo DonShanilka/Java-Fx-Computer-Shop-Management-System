@@ -14,6 +14,7 @@ import lk.ijse.tm.CustomerTm;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -86,6 +87,7 @@ public class CustomerController implements Initializable {
     private String[] pT = {"On Time", "Installments"};
     private String[] cat = {"LapTop", "DescTop", "Chairs & Table", "Parts", "Accessory"};
 
+
     @FXML
     void customerDeleteOnAction(ActionEvent event) {
         String nic = txtNic.getText();
@@ -97,14 +99,13 @@ public class CustomerController implements Initializable {
 
             if (isDelete){
                 new Alert(Alert.AlertType.CONFIRMATION, "Customer is Delete");
+                loadallCustomer();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Customer is Not Delete");
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @FXML
@@ -132,10 +133,10 @@ public class CustomerController implements Initializable {
 
             if (isSave){
                 new Alert(Alert.AlertType.CONFIRMATION, "Customer is Save");
+                loadallCustomer();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Customer is Not Save");
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -161,14 +162,13 @@ public class CustomerController implements Initializable {
 
             if (isUpdate){
                 new Alert(Alert.AlertType.CONFIRMATION, "Update Customer");
+                loadallCustomer();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Customer Not Update");
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public void loadallCustomer() throws SQLException {
@@ -199,10 +199,30 @@ public class CustomerController implements Initializable {
         }
     }
 
+
+
+    public void setData(CustomerTm row){
+        txtNic.setText(row.getNic());
+        txtName.setText(row.getName());
+        txtAddress.setText(row.getAddress());
+        txtMobile.setText(row.getMobile());
+        txtDate.setValue(LocalDate.parse(row.getDate()));
+        txtPaymentMethod.setValue(row.getPaymentMethod());
+        txtPaymentType.setValue(row.getPaymentType());
+        txtAmount.setText(row.getAmount());
+        txtItemCatagory.setValue(row.getItem_cat());
+        txtProductName.setText(row.getProduct_name());
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        txtPaymentMethod.getItems().addAll(pM);
-        txtPaymentType.getItems().addAll(pT);
-        txtItemCatagory.getItems().addAll(cat);
+        try {
+            loadallCustomer();
+            txtPaymentMethod.getItems().addAll(pM);
+            txtPaymentType.getItems().addAll(pT);
+            txtItemCatagory.getItems().addAll(cat);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
