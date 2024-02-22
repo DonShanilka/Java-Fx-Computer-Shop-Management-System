@@ -23,9 +23,9 @@ public class DashBordController {
     }
 
     void setForm(String form) throws IOException {
-        String[] formArray = {"/view/customer.fxml", "/view/employee.fxml", "/view/income.fxml"};
+        String[] formArray = {"/view/customer.fxml", "/view/employee.fxml", "/view/income.fxml", "/view/item.fxml"};
 
-        JFXButton[] btnArray = {customer,employee,home};
+        JFXButton[] btnArray = {customer,employee,home,item};
         AnchorPane load = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(form)));
         root1.getChildren().clear();
         root1.getChildren().add(load);
@@ -54,7 +54,7 @@ public class DashBordController {
     }
 
     @FXML
-    void itemOnAction(ActionEvent event) {
-
+    void itemOnAction(ActionEvent event) throws IOException {
+        setForm("/view/item.fxml");
     }
 }

@@ -2,25 +2,84 @@
 
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
+<AnchorPane prefHeight="751.0" prefWidth="1132.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
    <children>
       <TabPane layoutX="43.0" layoutY="123.0" prefHeight="546.0" prefWidth="1017.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="LAPTOP" />
-          <Tab text="GRAPHICS CARD" />
-            <Tab text="MEMORY" />
-            <Tab text="MOTHERBORAD" />
-            <Tab text="CASING" />
-            <Tab text="MONITORS" />
-            <Tab text="STORAGE" />
-            <Tab text="CHAIRS &amp; TABLE" />
-            <Tab text="STEERING WHEEL" />
-            <Tab text="ACCESSORIES" />
-            <Tab text="POWER SUPPLY &amp; UPS" />
-            <Tab text="OTHER" />
+          <Tab text="LAPTOP">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="153.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="GRAPHICS CARD">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="MEMORY">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="MOTHERBORAD">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="CASING">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="MONITORS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="STORAGE">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="CHAIRS &amp; TABLE">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="STEERING WHEEL">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="ACCESSORIES">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="POWER SUPPLY &amp; UPS">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="OTHER">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>
