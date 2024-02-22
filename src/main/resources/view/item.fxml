@@ -46,7 +46,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="207.0" layoutY="65.0" text="Year  :">
+                        <Label layoutX="281.0" layoutY="74.0" text="Year  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -56,7 +56,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="210.0" layoutY="123.0" text="Price   :">
+                        <Label layoutX="281.0" layoutY="123.0" text="Price   :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -78,13 +78,17 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="207.0" layoutY="194.0" text="Sepec   :">
+                        <Label layoutX="282.0" layoutY="194.0" text="Sepec   :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea layoutX="270.0" layoutY="194.0" prefHeight="98.0" prefWidth="245.0" />
-                        <TextField layoutX="266.0" layoutY="61.0" />
+                        <JFXTextArea layoutX="331.0" layoutY="194.0" prefHeight="98.0" prefWidth="184.0" />
+                        <TextField layoutX="364.0" layoutY="61.0" prefHeight="25.0" prefWidth="151.0" />
+                        <TextField layoutX="91.0" layoutY="61.0" />
+                        <TextField layoutX="366.0" layoutY="119.0" />
+                        <TextField layoutX="91.0" layoutY="119.0" />
+                        <TextField layoutX="91.0" layoutY="190.0" />
                      </children>
                   </AnchorPane>
                </content>
