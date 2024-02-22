@@ -7,8 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.dto.CustomerDto;
-import lk.ijse.dto.EmployeeDto;
 import lk.ijse.model.CustomerModel;
 import lk.ijse.tm.CustomerTm;
 
@@ -219,9 +219,23 @@ public class CustomerController implements Initializable {
         txtProductName.setText(row.getProduct_name());
     }
 
+    public void setCellValueFactory(){
+        tmNic.setCellValueFactory(new PropertyValueFactory<>("nic"));
+        tmName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tmAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        tmMobile.setCellValueFactory(new PropertyValueFactory<>("mobile"));
+        tmDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmMethod.setCellValueFactory(new PropertyValueFactory<>("paymentMethod"));
+        tmType.setCellValueFactory(new PropertyValueFactory<>("paymentType"));
+        tmAmount.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        tmCatogory.setCellValueFactory(new PropertyValueFactory<>("item_cat"));
+        tmProductName.setCellValueFactory(new PropertyValueFactory<>("product_name"));
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            setCellValueFactory();
             tableListener();
             loadallCustomer();
             txtPaymentMethod.getItems().addAll(pM);
