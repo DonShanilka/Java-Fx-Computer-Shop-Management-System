@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="745.0" prefWidth="1132.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
    <children>
-      <TabPane layoutX="58.0" layoutY="82.0" prefHeight="632.0" prefWidth="1017.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="14.0" layoutY="99.0" prefHeight="632.0" prefWidth="1104.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="LAPTOP">
                <content>
