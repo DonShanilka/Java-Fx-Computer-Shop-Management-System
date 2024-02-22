@@ -12,13 +12,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="745.0" prefWidth="1132.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
+<AnchorPane prefHeight="745.0" prefWidth="1116.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
    <children>
-      <TabPane layoutX="14.0" layoutY="99.0" prefHeight="632.0" prefWidth="1104.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="14.0" layoutY="99.0" prefHeight="632.0" prefWidth="1082.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="LAPTOP">
                <content>
-                  <AnchorPane prefHeight="542.0" prefWidth="1017.0">
+                  <AnchorPane prefHeight="603.0" prefWidth="1085.0">
                      <children>
                         <TableView layoutX="16.0" layoutY="336.0" prefHeight="253.0" prefWidth="986.0">
                           <columns>
@@ -41,7 +41,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="590.0" layoutY="47.0" text="Date   :">
+                        <Label layoutX="903.0" layoutY="65.0" text="Type :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -51,7 +51,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="548.0" layoutY="73.0" text="Qty   :">
+                        <Label layoutX="563.0" layoutY="194.0" text="Qty   :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -61,19 +61,19 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="590.0" layoutY="114.0" text="Suppliyer Name /  ID  :">
+                        <Label layoutX="561.0" layoutY="123.0" text="Date  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="641.0" layoutY="194.0" text="Suppliyer Name /  ID  :">
+                        <Label layoutX="562.0" layoutY="65.0" text="Suppliyer Name /  ID  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="16.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="540.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="435.0" />
-                        <Label layoutX="232.0" layoutY="24.0" text="Details" textFill="WHITE">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="562.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="482.0" />
+                        <Label layoutX="248.0" layoutY="24.0" text="Laptop Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -89,6 +89,11 @@
                         <TextField layoutX="366.0" layoutY="119.0" />
                         <TextField layoutX="91.0" layoutY="119.0" />
                         <TextField layoutX="91.0" layoutY="190.0" />
+                        <Label layoutX="733.0" layoutY="24.0" text="Other Details" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </content>
