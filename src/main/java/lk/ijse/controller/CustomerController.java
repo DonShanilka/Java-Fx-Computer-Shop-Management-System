@@ -199,7 +199,12 @@ public class CustomerController implements Initializable {
         }
     }
 
-
+    private void tableListener() {
+        customerTm.getSelectionModel().selectedItemProperty().addListener((observable, oldValued, newValue) -> {
+//            System.out.println(newValue);
+            setData(newValue);
+        });
+    }
 
     public void setData(CustomerTm row){
         txtNic.setText(row.getNic());
@@ -217,6 +222,7 @@ public class CustomerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            tableListener();
             loadallCustomer();
             txtPaymentMethod.getItems().addAll(pM);
             txtPaymentType.getItems().addAll(pT);
