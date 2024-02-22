@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.controller.ItemController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="683.0" prefWidth="1103.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
+   <children>
+      <TabPane layoutX="43.0" layoutY="123.0" prefHeight="546.0" prefWidth="1017.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="LAPTOP" />
+          <Tab text="GRAPHICS CARD" />
+            <Tab text="MEMORY" />
+            <Tab text="MOTHERBORAD" />
+            <Tab text="CASING" />
+            <Tab text="MONITORS" />
+            <Tab text="STORAGE" />
+            <Tab text="CHAIRS &amp; TABLE" />
+            <Tab text="STEERING WHEEL" />
+            <Tab text="ACCESSORIES" />
+            <Tab text="POWER SUPPLY &amp; UPS" />
+            <Tab text="OTHER" />
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>
