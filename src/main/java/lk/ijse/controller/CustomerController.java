@@ -1,21 +1,26 @@
 package lk.ijse.controller;
 
 import com.jfoenix.controls.JFXComboBox;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import lk.ijse.dto.CustomerDto;
+import lk.ijse.dto.EmployeeDto;
 import lk.ijse.model.CustomerModel;
+import lk.ijse.tm.CustomerTm;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
 
     @FXML
-    private TableView<?> customerTm;
+    private TableView<CustomerTm> customerTm;
 
     @FXML
     private TableColumn<?, ?> tmAddress;
@@ -164,6 +169,34 @@ public class CustomerController implements Initializable {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public void loadallCustomer() throws SQLException {
+        var model = new CustomerModel();
+
+        ObservableList<CustomerTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<CustomerDto> dtoList = model.getAll();
+
+            for (CustomerDto dto : dtoList){
+                obList.add(new CustomerTm(
+                        dto.getNic(),
+                        dto.getName(),
+                        dto.getAddress(),
+                        dto.getMobile(),
+                        dto.getDate(),
+                        dto.getPaymentMethod(),
+                        dto.getPaymentType(),
+                        dto.getAmount(),
+                        dto.getItem_cat(),
+                        dto.getProduct_name()
+                ));
+            }
+            customerTm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

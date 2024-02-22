@@ -248,7 +248,6 @@ public class EmployeeControlleController implements Initializable {
                         dto.getUni()
                 ));
             }
-
             employyeTm.setItems(obList);
         } catch (SQLException e) {
             throw new RuntimeException(e);
