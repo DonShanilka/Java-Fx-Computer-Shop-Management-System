@@ -5,7 +5,10 @@ import lk.ijse.dto.CustomerDto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerModel {
 
@@ -58,6 +61,32 @@ public class CustomerModel {
         pstm.setString(10,dto.getNic());
 
         return pstm.executeUpdate() >0;
+    }
+
+    public List<CustomerDto> getAll() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM customer";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        List<CustomerDto> customerDtoList = new ArrayList<>();
+
+        ResultSet resultSet = pstm.executeQuery();
+        while (resultSet.next()){
+            customerDtoList.add(new CustomerDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getString(8),
+                    resultSet.getString(9),
+                    resultSet.getString(10)
+            ));
+        }
+        return customerDtoList;
     }
 
 }
