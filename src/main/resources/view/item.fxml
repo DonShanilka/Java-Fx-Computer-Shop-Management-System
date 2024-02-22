@@ -1,26 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane prefHeight="751.0" prefWidth="1132.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
    <children>
-      <TabPane layoutX="43.0" layoutY="123.0" prefHeight="546.0" prefWidth="1017.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="58.0" layoutY="168.0" prefHeight="546.0" prefWidth="1017.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="LAPTOP">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="542.0" prefWidth="1017.0">
                      <children>
-                        <TableView layoutX="153.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0">
+                        <TableView layoutX="16.0" layoutY="277.0" prefHeight="226.0" prefWidth="986.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="C1" />
                             <TableColumn prefWidth="75.0" text="C2" />
                           </columns>
                         </TableView>
+                        <Label layoutX="16.0" layoutY="47.0" text="ID    :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="123.0" text="Brand    :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="194.0" text="Model No   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="590.0" layoutY="47.0" text="Date   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="314.0" layoutY="47.0" text="Manufactuer Year  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="317.0" layoutY="114.0" text="Qty   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="314.0" layoutY="203.0" text="Price   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="590.0" layoutY="114.0" text="Suppliyer Name /  ID  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="641.0" layoutY="194.0" text="Suppliyer Name /  ID  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="46.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="411.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="564.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="411.0" />
                      </children>
                   </AnchorPane>
                </content>
