@@ -11,7 +11,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="745.0" prefWidth="1116.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemController">
    <children>
       <TabPane layoutX="14.0" layoutY="99.0" prefHeight="632.0" prefWidth="1082.0" style="-fx-background-color: ffff;" tabClosingPolicy="UNAVAILABLE">
@@ -51,7 +50,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="563.0" layoutY="194.0" text="Qty   :">
+                        <Label layoutX="552.0" layoutY="194.0" text="Qty   :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -61,18 +60,18 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="561.0" layoutY="123.0" text="Date  :">
+                        <Label layoutX="550.0" layoutY="123.0" text="Date  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="562.0" layoutY="65.0" text="Suppliyer Name /  ID  :">
+                        <Label layoutX="550.0" layoutY="65.0" text="Suppliyer Name /  ID  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="16.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="562.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="482.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="550.0" layoutY="21.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="248.0" layoutY="24.0" text="Laptop Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
@@ -94,6 +93,9 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <TextField layoutX="705.0" layoutY="62.0" />
+                        <TextField layoutX="705.0" layoutY="190.0" />
+                        <TextField layoutX="937.0" layoutY="61.0" />
                      </children>
                   </AnchorPane>
                </content>
