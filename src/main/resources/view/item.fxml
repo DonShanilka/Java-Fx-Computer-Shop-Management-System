@@ -184,7 +184,7 @@
                         <JFXComboBox layoutX="929.0" layoutY="76.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="14.0" layoutY="25.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="546.0" layoutY="25.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
-                        <Label layoutX="213.0" layoutY="28.0" text="Laptop Details" textFill="WHITE">
+                        <Label layoutX="213.0" layoutY="28.0" text="GPU Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -199,7 +199,88 @@
             </Tab>
             <Tab text="MEMORY">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="17.0" layoutY="345.0" prefHeight="244.0" prefWidth="1049.0">
+                           <columns>
+                              <TableColumn prefWidth="65.0" text="ID" />
+                              <TableColumn prefWidth="97.0" text="Brand" />
+                              <TableColumn prefWidth="175.0" text="Model No" />
+                              <TableColumn prefWidth="106.0" text="Year" />
+                              <TableColumn prefWidth="137.0" text="Price" />
+                              <TableColumn prefWidth="137.0" text="S - N / I" />
+                              <TableColumn prefWidth="119.0" text="Date" />
+                              <TableColumn prefWidth="96.0" text="Qty" />
+                              <TableColumn prefWidth="116.0" text="Type" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="20.0" layoutY="88.0" text="ID    :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="146.0" text="Brand    :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="217.0" text="Model No   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="887.0" layoutY="88.0" text="Type :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="97.0" text="Year  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="553.0" layoutY="217.0" text="Qty   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="280.0" layoutY="146.0" text="Price   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="551.0" layoutY="146.0" text="Date  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="551.0" layoutY="88.0" text="Suppliyer Name /  ID  :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="105.0" layoutY="93.0" />
+                        <TextField layoutX="105.0" layoutY="213.0" />
+                        <TextField layoutX="105.0" layoutY="142.0" />
+                        <TextField layoutX="348.0" layoutY="93.0" />
+                        <TextField layoutX="348.0" layoutY="142.0" />
+                        <TextField layoutX="692.0" layoutY="85.0" />
+                        <TextField layoutX="692.0" layoutY="213.0" />
+                        <DatePicker layoutX="692.0" layoutY="142.0" prefHeight="25.0" prefWidth="150.0" />
+                        <JFXComboBox layoutX="934.0" layoutY="84.0" prefHeight="25.0" prefWidth="132.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="17.0" layoutY="33.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="551.0" layoutY="33.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
+                        <Label layoutX="216.0" layoutY="36.0" text="MEMORY Details" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="762.0" layoutY="36.0" text="Other Details" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
                </content>
             </Tab>
             <Tab text="MOTHERBORAD">
