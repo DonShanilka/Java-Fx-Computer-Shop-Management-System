@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -19,10 +21,18 @@
                <content>
                   <AnchorPane prefHeight="603.0" prefWidth="1085.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="336.0" prefHeight="253.0" prefWidth="986.0">
+                        <TableView layoutX="16.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="62.0" text="ID" />
+                            <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
                           </columns>
                         </TableView>
                         <Label layoutX="21.0" layoutY="65.0" text="ID    :">
@@ -40,7 +50,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="903.0" layoutY="65.0" text="Type :">
+                        <Label layoutX="886.0" layoutY="65.0" text="Type :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -82,12 +92,12 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea layoutX="331.0" layoutY="194.0" prefHeight="98.0" prefWidth="184.0" />
-                        <TextField layoutX="364.0" layoutY="61.0" prefHeight="25.0" prefWidth="151.0" />
-                        <TextField layoutX="91.0" layoutY="61.0" />
+                        <JFXTextArea layoutX="339.0" layoutY="194.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TextField layoutX="367.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" />
+                        <TextField layoutX="99.0" layoutY="62.0" />
                         <TextField layoutX="366.0" layoutY="119.0" />
-                        <TextField layoutX="91.0" layoutY="119.0" />
-                        <TextField layoutX="91.0" layoutY="190.0" />
+                        <TextField layoutX="99.0" layoutY="119.0" />
+                        <TextField layoutX="99.0" layoutY="190.0" />
                         <Label layoutX="733.0" layoutY="24.0" text="Other Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
@@ -95,7 +105,8 @@
                         </Label>
                         <TextField layoutX="705.0" layoutY="62.0" />
                         <TextField layoutX="705.0" layoutY="190.0" />
-                        <TextField layoutX="937.0" layoutY="61.0" />
+                        <JFXComboBox layoutX="934.0" layoutY="61.0" prefHeight="25.0" prefWidth="125.0" />
+                        <DatePicker layoutX="705.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" />
                      </children>
                   </AnchorPane>
                </content>
@@ -158,5 +169,10 @@
         </tabs>
       </TabPane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1132.0" />
+      <Label layoutX="1041.0" layoutY="7.0" text="Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
