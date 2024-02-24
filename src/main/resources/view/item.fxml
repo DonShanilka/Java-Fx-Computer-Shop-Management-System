@@ -378,6 +378,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="279.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="336.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -464,6 +470,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -550,6 +562,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -636,6 +654,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -722,6 +746,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -808,6 +838,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -894,6 +930,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="281.0" layoutY="195.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="338.0" layoutY="195.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -980,6 +1022,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1066,6 +1114,12 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                      </children></AnchorPane>
                </content>
             </Tab>
