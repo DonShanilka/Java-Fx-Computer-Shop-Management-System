@@ -21,7 +21,7 @@
                <content>
                   <AnchorPane prefHeight="603.0" prefWidth="1085.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                           <columns>
                             <TableColumn prefWidth="62.0" text="ID" />
                             <TableColumn prefWidth="81.0" text="Brand" />
@@ -115,19 +115,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="17.0" layoutY="340.0" prefHeight="244.0" prefWidth="1049.0">
-                          <columns>
-                            <TableColumn prefWidth="65.0" text="ID" />
-                            <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                          </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -200,6 +187,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="333.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="11.0" layoutY="334.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -207,19 +208,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="17.0" layoutY="342.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="20.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -292,6 +280,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="324.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -299,19 +301,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="342.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="19.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -384,6 +373,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="336.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -391,19 +394,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -476,6 +466,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -483,19 +487,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -568,6 +559,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -575,19 +580,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -660,6 +652,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -667,19 +673,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -752,6 +745,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -759,19 +766,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -844,6 +838,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -851,19 +859,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="21.0" layoutY="70.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -936,6 +931,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="338.0" layoutY="195.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -943,19 +952,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -1028,6 +1024,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1035,19 +1045,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="18.0" layoutY="343.0" prefHeight="244.0" prefWidth="1049.0">
-                           <columns>
-                              <TableColumn prefWidth="65.0" text="ID" />
-                              <TableColumn prefWidth="97.0" text="Brand" />
-                              <TableColumn prefWidth="175.0" text="Model No" />
-                              <TableColumn prefWidth="106.0" text="Year" />
-                              <TableColumn prefWidth="137.0" text="Price" />
-                              <TableColumn prefWidth="137.0" text="S - N / I" />
-                              <TableColumn prefWidth="119.0" text="Date" />
-                              <TableColumn prefWidth="96.0" text="Qty" />
-                              <TableColumn prefWidth="116.0" text="Type" />
-                           </columns>
-                        </TableView>
                         <Label layoutX="18.0" layoutY="72.0" text="ID    :">
                            <font>
                               <Font name="System Bold" size="12.0" />
@@ -1120,6 +1117,20 @@
                            </font>
                         </Label>
                         <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                           <columns>
+                              <TableColumn prefWidth="62.0" text="ID" />
+                              <TableColumn prefWidth="81.0" text="Brand" />
+                              <TableColumn prefWidth="116.0" text="Model No" />
+                              <TableColumn prefWidth="70.0" text="Year" />
+                              <TableColumn prefWidth="91.0" text="Price" />
+                              <TableColumn prefWidth="313.0" text="Sepec" />
+                              <TableColumn prefWidth="95.0" text="S- N / I" />
+                              <TableColumn prefWidth="86.0" text="Date" />
+                              <TableColumn prefWidth="53.0" text="Qty" />
+                              <TableColumn text="Type" />
+                           </columns>
+                        </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
