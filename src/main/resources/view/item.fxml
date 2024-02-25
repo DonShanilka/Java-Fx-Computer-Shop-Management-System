@@ -28,16 +28,16 @@
                      <children>
                         <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                           <columns>
-                            <TableColumn prefWidth="62.0" text="ID" />
-                            <TableColumn prefWidth="81.0" text="Brand" />
-                              <TableColumn prefWidth="116.0" text="Model No" />
-                              <TableColumn prefWidth="70.0" text="Year" />
-                              <TableColumn prefWidth="91.0" text="Price" />
-                              <TableColumn prefWidth="313.0" text="Sepec" />
-                              <TableColumn prefWidth="95.0" text="S- N / I" />
-                              <TableColumn prefWidth="86.0" text="Date" />
-                              <TableColumn prefWidth="53.0" text="Qty" />
-                              <TableColumn text="Type" />
+                            <TableColumn fx:id="tmLapId" prefWidth="62.0" text="ID" />
+                            <TableColumn fx:id="tmLapBrand" prefWidth="81.0" text="Brand" />
+                              <TableColumn fx:id="tmLapModelNo" prefWidth="116.0" text="Model No" />
+                              <TableColumn fx:id="tmLapYear" prefWidth="70.0" text="Year" />
+                              <TableColumn fx:id="tmLapPrice" prefWidth="91.0" text="Price" />
+                              <TableColumn fx:id="tmLapSpec" prefWidth="313.0" text="Sepec" />
+                              <TableColumn fx:id="tmLapSupName" prefWidth="95.0" text="S- N / I" />
+                              <TableColumn fx:id="tmLapDate" prefWidth="86.0" text="Date" />
+                              <TableColumn fx:id="tmLapQty" prefWidth="53.0" text="Qty" />
+                              <TableColumn fx:id="tmLapType" text="Type" />
                           </columns>
                         </TableView>
                         <Label layoutX="21.0" layoutY="65.0" text="ID    :">
@@ -97,21 +97,21 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea layoutX="339.0" layoutY="194.0" prefHeight="98.0" prefWidth="176.0" />
-                        <TextField layoutX="367.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" />
-                        <TextField layoutX="99.0" layoutY="62.0" />
-                        <TextField layoutX="366.0" layoutY="119.0" />
-                        <TextField layoutX="99.0" layoutY="119.0" />
-                        <TextField layoutX="99.0" layoutY="190.0" />
+                        <JFXTextArea fx:id="txtLapSpec" layoutX="339.0" layoutY="194.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TextField fx:id="txtLapYear" layoutX="367.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" />
+                        <TextField fx:id="txtLapId" layoutX="99.0" layoutY="62.0" />
+                        <TextField fx:id="txtLapPrice" layoutX="366.0" layoutY="119.0" />
+                        <TextField fx:id="txtLapBrand" layoutX="99.0" layoutY="119.0" />
+                        <TextField fx:id="txtLapModelNo" layoutX="99.0" layoutY="190.0" />
                         <Label layoutX="761.0" layoutY="24.0" text="Other Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="705.0" layoutY="62.0" />
-                        <TextField layoutX="705.0" layoutY="190.0" />
-                        <JFXComboBox layoutX="934.0" layoutY="61.0" prefHeight="25.0" prefWidth="125.0" />
-                        <DatePicker layoutX="705.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="txtLapsupName" layoutX="705.0" layoutY="62.0" />
+                        <TextField fx:id="txtLapQty" layoutX="705.0" layoutY="190.0" />
+                        <JFXComboBox fx:id="txtLapType" layoutX="934.0" layoutY="61.0" prefHeight="25.0" prefWidth="125.0" />
+                        <DatePicker fx:id="txtLapDate" layoutX="705.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" />
                         <JFXButton layoutX="586.0" layoutY="284.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
@@ -137,7 +137,7 @@
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="842.0" layoutY="284.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                        <JFXButton layoutX="839.0" layoutY="284.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
@@ -362,6 +362,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="586.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="965.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="711.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="842.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -455,6 +485,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -548,6 +608,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -641,6 +731,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -734,6 +854,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="583.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="962.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="708.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="839.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -827,6 +977,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="585.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="964.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="710.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="841.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -920,6 +1100,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1013,6 +1223,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="586.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="965.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="711.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="842.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1106,6 +1346,36 @@
                               <TableColumn text="Type" />
                            </columns>
                         </TableView>
+                        <JFXButton layoutX="585.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </JFXButton>
+                        <JFXButton layoutX="964.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="710.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="841.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
