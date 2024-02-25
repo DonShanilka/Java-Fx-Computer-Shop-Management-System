@@ -844,14 +844,14 @@
                            <columns>
                               <TableColumn fx:id="tmStoID" prefWidth="62.0" text="ID" />
                               <TableColumn fx:id="tmStoBrand" prefWidth="81.0" text="Brand" />
-                              <TableColumn prefWidth="116.0" text="Model No" />
-                              <TableColumn prefWidth="70.0" text="Year" />
-                              <TableColumn prefWidth="91.0" text="Price" />
-                              <TableColumn prefWidth="313.0" text="Sepec" />
-                              <TableColumn prefWidth="95.0" text="S- N / I" />
-                              <TableColumn prefWidth="86.0" text="Date" />
-                              <TableColumn prefWidth="53.0" text="Qty" />
-                              <TableColumn text="Type" />
+                              <TableColumn fx:id="tmStoModelNo" prefWidth="116.0" text="Model No" />
+                              <TableColumn fx:id="tmStoYear" prefWidth="70.0" text="Year" />
+                              <TableColumn fx:id="tmStoPrice" prefWidth="91.0" text="Price" />
+                              <TableColumn fx:id="tmStoSpec" prefWidth="313.0" text="Sepec" />
+                              <TableColumn fx:id="tmStoSupID" prefWidth="95.0" text="S- N / I" />
+                              <TableColumn fx:id="tmStoDate" prefWidth="86.0" text="Date" />
+                              <TableColumn fx:id="tmStoQty" prefWidth="53.0" text="Qty" />
+                              <TableColumn fx:id="tmStoType" text="Type" />
                            </columns>
                         </TableView>
                         <JFXButton layoutX="583.0" layoutY="287.0" onAction="#storageAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
