@@ -14,6 +14,16 @@ public class ItemController {
 
     @FXML
     public TableView <?> OtherTM;
+
+    @FXML
+    public TextField MbBrand;
+
+    @FXML
+    public TextField MBqTy;
+
+    @FXML
+    public JFXComboBox<?> MBtype;
+
     @FXML
     private TextField AccBrand;
 

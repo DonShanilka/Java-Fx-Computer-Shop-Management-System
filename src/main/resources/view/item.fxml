@@ -446,13 +446,13 @@
                         </Label>
                         <TextField fx:id="MBId" layoutX="104.0" layoutY="77.0" />
                         <TextField fx:id="MBmodelNo" layoutX="104.0" layoutY="197.0" />
-                        <TextField fx:id="MBmodelNo" layoutX="104.0" layoutY="126.0" />
+                        <TextField fx:id="MbBrand" layoutX="104.0" layoutY="126.0" />
                         <TextField fx:id="MByear" layoutX="347.0" layoutY="77.0" />
                         <TextField fx:id="MBprice" layoutX="347.0" layoutY="126.0" />
                         <TextField fx:id="MBsupID" layoutX="689.0" layoutY="69.0" />
-                        <TextField fx:id="MBqty" layoutX="689.0" layoutY="197.0" />
+                        <TextField fx:id="MBqTy" layoutX="689.0" layoutY="197.0" />
                         <DatePicker fx:id="MBDate" layoutX="689.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="MBqty" layoutX="931.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
+                        <JFXComboBox fx:id="MBtype" layoutX="931.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="16.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="548.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="215.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -1233,7 +1233,7 @@
                                     <Shadow />
                                  </bumpInput>
                                  <light>
-                                    <Light.Distant />
+                                    <!--<Light.Distant />-->
                                  </light>
                               </Lighting>
                            </effect>
@@ -1356,7 +1356,7 @@
                                     <Shadow />
                                  </bumpInput>
                                  <light>
-                                    <Light.Distant />
+                                    <!--<Light.Distant />-->
                                  </light>
                               </Lighting>
                            </effect>
@@ -1479,7 +1479,6 @@
                                     <Shadow />
                                  </bumpInput>
                                  <light>
-                                    <Light.Distant />
                                  </light>
                               </Lighting>
                            </effect>
