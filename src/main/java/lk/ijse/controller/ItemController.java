@@ -13,6 +13,8 @@ import javafx.scene.control.TextField;
 public class ItemController {
 
     @FXML
+    public TableView <?> OtherTM;
+    @FXML
     private TextField AccBrand;
 
     @FXML
@@ -765,10 +767,6 @@ public class ItemController {
     @FXML
     private JFXComboBox<?> wheelType;
 
-    @FXML
-    void OtherTM(ActionEvent event) {
-
-    }
 
     @FXML
     void accAddOnAction(ActionEvent event) {
