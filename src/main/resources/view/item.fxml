@@ -1182,15 +1182,15 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="106.0" layoutY="75.0" />
-                        <TextField layoutX="106.0" layoutY="195.0" />
-                        <TextField layoutX="106.0" layoutY="124.0" />
-                        <TextField layoutX="349.0" layoutY="75.0" />
-                        <TextField layoutX="349.0" layoutY="124.0" />
-                        <TextField layoutX="691.0" layoutY="67.0" />
-                        <TextField layoutX="691.0" layoutY="195.0" />
-                        <DatePicker layoutX="691.0" layoutY="124.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox layoutX="933.0" layoutY="66.0" prefHeight="25.0" prefWidth="132.0" />
+                        <TextField fx:id="AccId" layoutX="106.0" layoutY="75.0" />
+                        <TextField fx:id="AccModel" layoutX="106.0" layoutY="195.0" />
+                        <TextField fx:id="AccBrand" layoutX="106.0" layoutY="124.0" />
+                        <TextField fx:id="AccYear" layoutX="349.0" layoutY="75.0" />
+                        <TextField fx:id="AccPrice" layoutX="349.0" layoutY="124.0" />
+                        <TextField fx:id="AccSupId" layoutX="691.0" layoutY="67.0" />
+                        <TextField fx:id="AccQty" layoutX="691.0" layoutY="195.0" />
+                        <DatePicker fx:id="AccDate" layoutX="691.0" layoutY="124.0" prefHeight="25.0" prefWidth="150.0" />
+                        <JFXComboBox fx:id="AccType" layoutX="933.0" layoutY="66.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="18.0" layoutY="15.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="550.0" layoutY="15.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="217.0" layoutY="18.0" text="Laptop Details" textFill="WHITE">
@@ -1208,22 +1208,22 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea layoutX="338.0" layoutY="195.0" prefHeight="98.0" prefWidth="176.0" />
-                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                        <JFXTextArea fx:id="AccSpec" layoutX="338.0" layoutY="195.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView fx:id="AccessoriesTm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
-                              <TableColumn prefWidth="62.0" text="ID" />
-                              <TableColumn prefWidth="81.0" text="Brand" />
-                              <TableColumn prefWidth="116.0" text="Model No" />
-                              <TableColumn prefWidth="70.0" text="Year" />
-                              <TableColumn prefWidth="91.0" text="Price" />
-                              <TableColumn prefWidth="313.0" text="Sepec" />
-                              <TableColumn prefWidth="95.0" text="S- N / I" />
-                              <TableColumn prefWidth="86.0" text="Date" />
-                              <TableColumn prefWidth="53.0" text="Qty" />
-                              <TableColumn text="Type" />
+                              <TableColumn fx:id="tmAccId" prefWidth="62.0" text="ID" />
+                              <TableColumn fx:id="tmAccBrand" prefWidth="81.0" text="Brand" />
+                              <TableColumn fx:id="tmAccModel" prefWidth="116.0" text="Model No" />
+                              <TableColumn fx:id="tmAccYear" prefWidth="70.0" text="Year" />
+                              <TableColumn fx:id="tmAccPrice" prefWidth="91.0" text="Price" />
+                              <TableColumn fx:id="tmAccspec" prefWidth="313.0" text="Sepec" />
+                              <TableColumn fx:id="tmAccSupId" prefWidth="95.0" text="S- N / I" />
+                              <TableColumn fx:id="tmAccDate" prefWidth="86.0" text="Date" />
+                              <TableColumn fx:id="tmAccQty" prefWidth="53.0" text="Qty" />
+                              <TableColumn fx:id="tmAccType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="586.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                        <JFXButton layoutX="586.0" layoutY="287.0" onAction="#accAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
@@ -1238,17 +1238,17 @@
                               </Lighting>
                            </effect>
                         </JFXButton>
-                        <JFXButton layoutX="965.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                        <JFXButton layoutX="965.0" layoutY="287.0" onAction="#accListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="711.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                        <JFXButton layoutX="711.0" layoutY="287.0" onAction="#accUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="842.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                        <JFXButton layoutX="842.0" layoutY="287.0" onAction="#accDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
