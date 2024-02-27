@@ -1059,15 +1059,15 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="103.0" layoutY="77.0" />
-                        <TextField layoutX="103.0" layoutY="197.0" />
-                        <TextField layoutX="103.0" layoutY="126.0" />
-                        <TextField layoutX="346.0" layoutY="77.0" />
-                        <TextField layoutX="346.0" layoutY="126.0" />
-                        <TextField layoutX="688.0" layoutY="69.0" />
-                        <TextField layoutX="688.0" layoutY="197.0" />
-                        <DatePicker layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
+                        <TextField fx:id="wheelId" layoutX="103.0" layoutY="77.0" />
+                        <TextField fx:id="weelMode" layoutX="103.0" layoutY="197.0" />
+                        <TextField fx:id="wheelBrrand" layoutX="103.0" layoutY="126.0" />
+                        <TextField fx:id="weelYear" layoutX="346.0" layoutY="77.0" />
+                        <TextField fx:id="wheelPrice" layoutX="346.0" layoutY="126.0" />
+                        <TextField fx:id="wheelSupId" layoutX="688.0" layoutY="69.0" />
+                        <TextField fx:id="weelDate" layoutX="688.0" layoutY="197.0" />
+                        <DatePicker fx:id="wheelDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
+                        <JFXComboBox fx:id="wheelType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -1085,22 +1085,22 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
-                        <TableView layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
+                        <JFXTextArea fx:id="wheelSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
+                        <TableView layoutX="17.0" layoutY="336.0" onSort="#wheelTm" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
-                              <TableColumn prefWidth="62.0" text="ID" />
-                              <TableColumn prefWidth="81.0" text="Brand" />
-                              <TableColumn prefWidth="116.0" text="Model No" />
-                              <TableColumn prefWidth="70.0" text="Year" />
-                              <TableColumn prefWidth="91.0" text="Price" />
-                              <TableColumn prefWidth="313.0" text="Sepec" />
-                              <TableColumn prefWidth="95.0" text="S- N / I" />
-                              <TableColumn prefWidth="86.0" text="Date" />
-                              <TableColumn prefWidth="53.0" text="Qty" />
-                              <TableColumn text="Type" />
+                              <TableColumn fx:id="tmWeelId" prefWidth="62.0" text="ID" />
+                              <TableColumn fx:id="tmWeelBrand" prefWidth="81.0" text="Brand" />
+                              <TableColumn fx:id="tmWeelModel" prefWidth="116.0" text="Model No" />
+                              <TableColumn fx:id="tmWeelYear" prefWidth="70.0" text="Year" />
+                              <TableColumn fx:id="tmWeelPrice" prefWidth="91.0" text="Price" />
+                              <TableColumn fx:id="tmWeelSpec" prefWidth="313.0" text="Sepec" />
+                              <TableColumn fx:id="tmWeelSupId" prefWidth="95.0" text="S- N / I" />
+                              <TableColumn fx:id="tmWeelDate" prefWidth="86.0" text="Date" />
+                              <TableColumn fx:id="tmWheelQty" prefWidth="53.0" text="Qty" />
+                              <TableColumn fx:id="tmWeelType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                        <JFXButton layoutX="584.0" layoutY="287.0" onAction="#wheelAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
@@ -1115,17 +1115,17 @@
                               </Lighting>
                            </effect>
                         </JFXButton>
-                        <JFXButton layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                        <JFXButton layoutX="963.0" layoutY="287.0" onAction="#wheelList" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                        <JFXButton layoutX="709.0" layoutY="287.0" onAction="#wheelUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#wheelDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
