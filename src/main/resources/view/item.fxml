@@ -1449,7 +1449,7 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
+                        <Label layoutX="278.0" layoutY="197.0" text="Sepec:">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
