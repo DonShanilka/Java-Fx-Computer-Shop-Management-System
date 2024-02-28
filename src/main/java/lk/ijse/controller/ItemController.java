@@ -172,7 +172,7 @@ public class ItemController {
     private TextField chSupid;
 
     @FXML
-    private JFXComboBox<?> chType;
+    private JFXComboBox<String> chType;
 
     @FXML
     private TextField chYear;
@@ -780,6 +780,7 @@ public class ItemController {
     @FXML
     private JFXComboBox<?> wheelType;
 
+    private String[] ty = {"Brand New", "Use"};
 
     @FXML
     void accAddOnAction(ActionEvent event) {
@@ -787,7 +788,7 @@ public class ItemController {
         String brand = AccBrand.getText();
         String modelno = AccModel.getText();
         String year = AccYear.getText();
-        Double price = Double.valueOf(AccPrice.getText());
+        double price = Double.parseDouble(AccPrice.getText());
         String spec = AccSpec.getText();
         String supid = AccSupId.getText();
         Date date = Date.valueOf(AccDate.getValue());
@@ -828,7 +829,31 @@ public class ItemController {
 
     @FXML
     void chAddOnAction(ActionEvent event) {
+        String id = chID.getText();
+        String brand = chBrand.getText();
+        String modelno = chModel.getText();
+        String year = chYear.getText();
+        Double price = Double.valueOf(chPrice.getText());
+        String spec = chSpec.getText();
+        String supid = chSupid.getText();
+        Date date = Date.valueOf(chDate.getValue());
+        int qty = Integer.parseInt(chQty.getText());
+        String type = chType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.accAdd(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
