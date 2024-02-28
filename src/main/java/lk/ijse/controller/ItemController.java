@@ -839,7 +839,7 @@ public class ItemController implements Initializable {
         String brand = chBrand.getText();
         String modelno = chModel.getText();
         String year = chYear.getText();
-        Double price = Double.valueOf(chPrice.getText());
+        double price = Double.parseDouble(chPrice.getText());
         String spec = chSpec.getText();
         String supid = chSupid.getText();
         Date date = Date.valueOf(chDate.getValue());
@@ -849,7 +849,7 @@ public class ItemController implements Initializable {
         var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
 
         try {
-            boolean isSave = ItemModel.accAdd(dto);
+            boolean isSave = ItemModel.chAddOnAction(dto);
 
             if (isSave){
                 new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
@@ -879,7 +879,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void gpuAddOnAction(ActionEvent event) {
+        String id = txtGpuId.getText();
+        String brand = txtGpuBrand.getText();
+        String modelno = txtGpuModelNo.getText();
+        String year = txtGpuYear.getText();
+        double price = Double.parseDouble(txtGpuPrice.getText());
+        String spec = txtGpuSpec.getText();
+        String supid = txtGpuSupId.getText();
+        Date date = Date.valueOf(txtGpuDate.getValue());
+        int qty = Integer.parseInt(txtGpuQty.getText());
+        String type = txtGpuType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.gpuAddOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
