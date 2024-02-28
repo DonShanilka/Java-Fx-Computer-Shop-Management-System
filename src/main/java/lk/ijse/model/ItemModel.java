@@ -300,8 +300,24 @@ public class ItemModel {
     }
 
     @FXML
-    void storageAddOnAction(ActionEvent event) {
+    public static boolean storageAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setDate(4, (Date) dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
     }
 
     @FXML
@@ -320,8 +336,24 @@ public class ItemModel {
     }
 
     @FXML
-    void upsAddOnAction(ActionEvent event) {
+    public static boolean upsAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setDate(4, (Date) dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
     }
 
     @FXML
@@ -340,22 +372,28 @@ public class ItemModel {
     }
 
     @FXML
-    void wheelAddOnAction(ActionEvent event) {
+    public static boolean wheelAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setDate(4, (Date) dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
     }
 
     @FXML
     void wheelDeleteOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void wheelList(ActionEvent event) {
-
-    }
-
-    @FXML
-    void wheelTm(ActionEvent event) {
 
     }
 
