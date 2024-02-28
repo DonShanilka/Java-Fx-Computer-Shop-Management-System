@@ -5,10 +5,13 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import lk.ijse.dto.ItemDto;
+import lk.ijse.model.ItemModel;
+
+import java.sql.Date;
+import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class ItemController {
 
@@ -49,7 +52,7 @@ public class ItemController {
     private TextField AccSupId;
 
     @FXML
-    private JFXComboBox<?> AccType;
+    private JFXComboBox<String> AccType;
 
     @FXML
     private TextField AccYear;
@@ -780,6 +783,31 @@ public class ItemController {
 
     @FXML
     void accAddOnAction(ActionEvent event) {
+        String id = AccId.getText();
+        String brand = AccBrand.getText();
+        String modelno = AccModel.getText();
+        String year = AccYear.getText();
+        Double price = Double.valueOf(AccPrice.getText());
+        String spec = AccSpec.getText();
+        String supid = AccSupId.getText();
+        Date date = Date.valueOf(AccDate.getValue());
+        int qty = Integer.parseInt(AccQty.getText());
+        String type = AccType.getValue();
+
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.accAdd(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

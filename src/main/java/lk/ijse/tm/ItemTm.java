@@ -14,7 +14,7 @@ public class ItemTm {
     private String id;
     private String brand;
     private String modelno;
-    private Date year;
+    private String year;
     private double price;
     private String spec;
     private String supid;

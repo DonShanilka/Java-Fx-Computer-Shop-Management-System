@@ -2,6 +2,7 @@ package lk.ijse.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -14,12 +15,13 @@ public class ItemDto {
     private String id;
     private String brand;
     private String modelno;
-    private Date year;
+    private String year;
     private double price;
     private String spec;
     private String supid;
     private Date date;
     private int qty;
     private String type;
+
 
 }
