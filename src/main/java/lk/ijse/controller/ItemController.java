@@ -5,15 +5,18 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.model.ItemModel;
 
+import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class ItemController {
+public class ItemController implements Initializable {
 
     @FXML
     public TableView <?> OtherTM;
@@ -25,7 +28,10 @@ public class ItemController {
     public TextField MBqTy;
 
     @FXML
-    public JFXComboBox<?> MBtype;
+    public JFXComboBox<String> MBtype;
+
+    @FXML
+    public JFXComboBox<String> otherType;
 
     @FXML
     private TextField AccBrand;
@@ -85,7 +91,7 @@ public class ItemController {
     private TextField CasSupId;
 
     @FXML
-    private JFXComboBox<?> CasType;
+    private JFXComboBox<String> CasType;
 
     @FXML
     private TableView<?> CasingTm;
@@ -115,7 +121,7 @@ public class ItemController {
     private TextField MBprice;
 
     @FXML
-    private JFXComboBox<?> MBqty;
+    private JFXComboBox<String> MBqty;
 
     @FXML
     private JFXTextArea MBspec;
@@ -205,7 +211,7 @@ public class ItemController {
     private TableView<?> moniTm;
 
     @FXML
-    private JFXComboBox<?> moniType;
+    private JFXComboBox<String> moniType;
 
     @FXML
     private TextField moniYear;
@@ -262,7 +268,7 @@ public class ItemController {
     private TextField stoSupID;
 
     @FXML
-    private JFXComboBox<?> stoType;
+    private JFXComboBox<String> stoType;
 
     @FXML
     private TextField stoYear;
@@ -658,7 +664,7 @@ public class ItemController {
     private TextField txtGpuSupId;
 
     @FXML
-    private JFXComboBox<?> txtGpuType;
+    private JFXComboBox<String> txtGpuType;
 
     @FXML
     private TextField txtGpuYear;
@@ -685,7 +691,7 @@ public class ItemController {
     private JFXTextArea txtLapSpec;
 
     @FXML
-    private JFXComboBox<?> txtLapType;
+    private JFXComboBox<String> txtLapType;
 
     @FXML
     private TextField txtLapYear;
@@ -715,7 +721,7 @@ public class ItemController {
     private TextField txtRamSupId;
 
     @FXML
-    private JFXComboBox<?> txtRamType;
+    private JFXComboBox<String> txtRamType;
 
     @FXML
     private TextField txtRamYear;
@@ -745,7 +751,7 @@ public class ItemController {
     private TextField upsSupId;
 
     @FXML
-    private JFXComboBox<?> upsType;
+    private JFXComboBox<String> upsType;
 
     @FXML
     private TextField upsYear;
@@ -778,9 +784,9 @@ public class ItemController {
     private TextField wheelSupId;
 
     @FXML
-    private JFXComboBox<?> wheelType;
+    private JFXComboBox<String> wheelType;
 
-    private String[] ty = {"Brand New", "Use"};
+    private final String[] ty = {"Brand New", "Use"};
 
     @FXML
     void accAddOnAction(ActionEvent event) {
@@ -1057,4 +1063,20 @@ public class ItemController {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        AccType.getItems().addAll(ty);
+        chType.getItems().addAll(ty);
+        txtLapType.getItems().addAll(ty);
+        txtGpuType.getItems().addAll(ty);
+        txtRamType.getItems().addAll(ty);
+        MBtype.getItems().addAll(ty);
+        CasType.getItems().addAll(ty);
+        moniType.getItems().addAll(ty);
+        stoType.getItems().addAll(ty);
+        wheelType.getItems().addAll(ty);
+        upsType.getItems().addAll(ty);
+        otherType.getItems().addAll(ty);
+
+    }
 }

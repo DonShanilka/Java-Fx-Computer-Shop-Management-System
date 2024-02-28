@@ -24,7 +24,7 @@
         <tabs>
           <Tab text="LAPTOP">
                <content>
-                  <AnchorPane prefHeight="603.0" prefWidth="1085.0">
+                  <AnchorPane fx:id="txt" prefHeight="603.0" prefWidth="1085.0">
                      <children>
                         <TableView fx:id="LapToptm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                           <columns>
@@ -1436,7 +1436,7 @@
                         <TextField fx:id="otherSupId" layoutX="688.0" layoutY="69.0" />
                         <TextField fx:id="otherQty" layoutX="688.0" layoutY="197.0" />
                         <DatePicker fx:id="otherDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
+                        <JFXComboBox fx:id="otherType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
