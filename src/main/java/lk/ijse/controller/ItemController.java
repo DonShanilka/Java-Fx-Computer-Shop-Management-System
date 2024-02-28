@@ -923,7 +923,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void lapAddOnAction(ActionEvent event) {
+        String id = txtLapId.getText();
+        String brand = txtLapBrand.getText();
+        String modelno = txtLapModelNo.getText();
+        String year = txtLapYear.getText();
+        double price = Double.parseDouble(txtLapPrice.getText());
+        String spec = txtLapSpec.getText();
+        String supid = txtLapsupName.getText();
+        Date date = Date.valueOf(txtLapDate.getValue());
+        int qty = Integer.parseInt(txtLapQty.getText());
+        String type = txtLapType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.lapAddOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
