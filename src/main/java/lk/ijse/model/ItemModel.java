@@ -1,6 +1,7 @@
 package lk.ijse.model;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.ItemDto;
 
@@ -44,11 +45,228 @@ public class ItemModel {
     }
 
 
-    public static boolean accUpdate() throws SQLException {
+    public static boolean accUpdate(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE employee SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getBrand());
+        pstm.setString(2,dto.getModelno());
+        pstm.setDate(3, (Date) dto.getYear());
+        pstm.setDouble(4,dto.getPrice());
+        pstm.setString(5,dto.getSpec());
+        pstm.setString(6,dto.getSupid());
+        pstm.setDate(7,(Date) dto.getDate());
+        pstm.setInt(8,dto.getQty());
+        pstm.setString(9,dto.getType());
+        pstm.setString(10,dto.getId());
+
+        return pstm.executeUpdate()>0;
+    }
+
+    void chAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void chDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void chListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void chUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void gpuAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void gpuDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void gpuListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void gpuUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void lapAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void lapDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void lapGetListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void lapUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mbAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mbDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mbListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mbUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void moniListAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void monitorAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void monitorDeteleOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void monitorUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void otherAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void otherDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void otherListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void otherUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ramAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ramDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ramListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ramUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void storageAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void storageDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void storageListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void storageUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void upsAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void upsDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void upsListOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void upsUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wheelAddOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wheelDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wheelList(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wheelTm(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wheelUpdateOnAction(ActionEvent event) {
+
     }
 
 }
