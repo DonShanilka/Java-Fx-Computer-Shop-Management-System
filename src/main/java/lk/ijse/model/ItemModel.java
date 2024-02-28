@@ -89,10 +89,6 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void chListOnAction(ActionEvent event) {
-
-    }
 
     @FXML
     void chUpdateOnAction(ActionEvent event) {
@@ -125,10 +121,6 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void gpuListOnAction(ActionEvent event) {
-
-    }
 
     @FXML
     void gpuUpdateOnAction(ActionEvent event) {
@@ -136,8 +128,24 @@ public class ItemModel {
     }
 
     @FXML
-    void lapAddOnAction(ActionEvent event) {
+    public static boolean lapAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setDate(4, (Date) dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
     }
 
     @FXML
@@ -145,10 +153,6 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void lapGetListOnAction(ActionEvent event) {
-
-    }
 
     @FXML
     void lapUpdateOnAction(ActionEvent event) {
@@ -156,8 +160,24 @@ public class ItemModel {
     }
 
     @FXML
-    void mbAddOnAction(ActionEvent event) {
+    public static boolean mbAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setDate(4, (Date) dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
     }
 
     @FXML
@@ -165,10 +185,6 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void mbListOnAction(ActionEvent event) {
-
-    }
 
     @FXML
     void mbUpdateOnAction(ActionEvent event) {
