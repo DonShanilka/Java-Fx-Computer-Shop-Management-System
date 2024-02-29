@@ -1230,7 +1230,21 @@ public class ItemController implements Initializable {
 
     @FXML
     void ramDeleteOnAction(ActionEvent event) {
+        String id = txtRamId.getText();
 
+        ItemDto dto = new ItemDto(id);
+
+        try{
+            boolean isDelete = ItemModel.ramDeleteOnAction(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
