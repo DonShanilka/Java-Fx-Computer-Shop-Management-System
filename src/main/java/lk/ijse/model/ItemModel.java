@@ -273,7 +273,7 @@ public class ItemModel {
         pstm.setString(1,dto.getId());
         pstm.setString(2,dto.getBrand());
         pstm.setString(3,dto.getModelno());
-        pstm.setDate(4, Date.valueOf(dto.getYear()));
+        pstm.setString(4,dto.getYear());
         pstm.setDouble(5,dto.getPrice());
         pstm.setString(6,dto.getSpec());
         pstm.setString(7,dto.getSupid());
