@@ -52,7 +52,7 @@ public class ItemModel {
 
         pstm.setString(1,dto.getBrand());
         pstm.setString(2,dto.getModelno());
-        pstm.setDate(3, Date.valueOf(dto.getYear()));
+        pstm.setString(3,dto.getYear());
         pstm.setDouble(4,dto.getPrice());
         pstm.setString(5,dto.getSpec());
         pstm.setString(6,dto.getSupid());
@@ -84,9 +84,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void chDeleteOnAction(ActionEvent event) {
 
+    public static boolean chDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
 
@@ -116,9 +122,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void gpuDeleteOnAction(ActionEvent event) {
 
+    public static boolean gpuDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
 
