@@ -1288,7 +1288,21 @@ public class ItemController implements Initializable {
 
     @FXML
     void storageDeleteOnAction(ActionEvent event) {
+        String id = stoID.getText();
 
+        ItemDto dto = new ItemDto(id);
+
+        try{
+            boolean isDelete = ItemModel.storageDeleteOnAction(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
