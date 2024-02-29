@@ -7,13 +7,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.ItemDto;
+import lk.ijse.model.CustomerModel;
 import lk.ijse.model.ItemModel;
 
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class ItemController implements Initializable {
@@ -823,7 +824,21 @@ public class ItemController implements Initializable {
 
     @FXML
     void accDeleteOnAction(ActionEvent event) {
+        String nic = AccId.getText();
 
+        ItemDto dto = new ItemDto(nic);
+
+        try{
+            boolean isDelete = ItemModel.accDelete(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Customer is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Customer is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML

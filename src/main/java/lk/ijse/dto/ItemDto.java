@@ -24,4 +24,7 @@ public class ItemDto {
     private String type;
 
 
+    public ItemDto(String nic) {
+        this.id = nic;
+    }
 }
