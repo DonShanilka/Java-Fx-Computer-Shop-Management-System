@@ -1055,7 +1055,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void otherAddOnAction(ActionEvent event) {
+        String id = otherid.getText();
+        String brand = otherBrand.getText();
+        String modelno = otherModel.getText();
+        String year = odherYear.getText();
+        double price = Double.parseDouble(otherPrice.getText());
+        String spec = otherSpec.getText();
+        String supid = otherSupId.getText();
+        Date date = Date.valueOf(otherDate.getValue());
+        int qty = Integer.parseInt(otherQty.getText());
+        String type = otherType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.otherAddOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
