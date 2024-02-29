@@ -487,9 +487,25 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void storageUpdateOnAction(ActionEvent event) {
 
+    public static boolean storageUpdateOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getBrand());
+        pstm.setString(2,dto.getModelno());
+        pstm.setString(3,dto.getYear());
+        pstm.setDouble(4,dto.getPrice());
+        pstm.setString(5,dto.getSpec());
+        pstm.setString(6,dto.getSupid());
+        pstm.setDate(7,(Date) dto.getDate());
+        pstm.setInt(8,dto.getQty());
+        pstm.setString(9,dto.getType());
+        pstm.setString(10,dto.getId());
+
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
@@ -529,12 +545,28 @@ public class ItemModel {
 
     }
 
-    @FXML
-    void upsUpdateOnAction(ActionEvent event) {
 
+    public static boolean upsUpdateOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getBrand());
+        pstm.setString(2,dto.getModelno());
+        pstm.setString(3,dto.getYear());
+        pstm.setDouble(4,dto.getPrice());
+        pstm.setString(5,dto.getSpec());
+        pstm.setString(6,dto.getSupid());
+        pstm.setDate(7,(Date) dto.getDate());
+        pstm.setInt(8,dto.getQty());
+        pstm.setString(9,dto.getType());
+        pstm.setString(10,dto.getId());
+
+        return pstm.executeUpdate()>0;
     }
 
-    @FXML
+
     public static boolean wheelAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
