@@ -998,7 +998,21 @@ public class ItemController implements Initializable {
 
     @FXML
     void lapDeleteOnAction(ActionEvent event) {
+        String id = txtLapId.getText();
 
+        ItemDto dto = new ItemDto(id);
+
+        try{
+            boolean isDelete = ItemModel.lapDeleteOnAction(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
