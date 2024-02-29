@@ -404,9 +404,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void upsDeleteOnAction(ActionEvent event) {
 
+    public static boolean upsDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
