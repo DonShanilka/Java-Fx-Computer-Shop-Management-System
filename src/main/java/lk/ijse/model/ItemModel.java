@@ -47,7 +47,7 @@ public class ItemModel {
     public static boolean accUpdate(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE employee SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1,dto.getBrand());
@@ -100,7 +100,7 @@ public class ItemModel {
     public static boolean chUpdateOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE employee SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1,dto.getBrand());
@@ -153,7 +153,7 @@ public class ItemModel {
     public static boolean gpuUpdateOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE employee SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1,dto.getBrand());
@@ -206,7 +206,7 @@ public class ItemModel {
     public static boolean lapUpdateOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE employee SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
+        String sql = "UPDATE item SET brand=?, modelno=?, year=?, price=?, spec=?, supid=?, date=?, qty=?, type=? WHERE id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1,dto.getBrand());
