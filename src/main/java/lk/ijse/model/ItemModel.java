@@ -198,9 +198,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void mbDeleteOnAction(ActionEvent event) {
 
+    public static boolean mbDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
 
@@ -235,9 +241,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void monitorDeteleOnAction(ActionEvent event) {
 
+    public static boolean monitorDeteleOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
@@ -266,9 +278,15 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void otherDeleteOnAction(ActionEvent event) {
 
+    public static boolean otherDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
@@ -303,8 +321,14 @@ public class ItemModel {
     }
 
     @FXML
-    void ramDeleteOnAction(ActionEvent event) {
+    public static boolean ramDeleteOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
@@ -339,8 +363,14 @@ public class ItemModel {
     }
 
     @FXML
-    void storageDeleteOnAction(ActionEvent event) {
+    void storageDeleteOnAction(ActionEvent event) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
 
+        String sql = "DELETE FROM item WHERE id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1 ,dto.getId());
+        return pstm.executeUpdate()>0;
     }
 
     @FXML
