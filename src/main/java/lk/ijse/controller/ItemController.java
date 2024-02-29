@@ -1404,7 +1404,21 @@ public class ItemController implements Initializable {
 
     @FXML
     void wheelDeleteOnAction(ActionEvent event) {
+        String id = wheelId.getText();
 
+        ItemDto dto = new ItemDto(id);
+
+        try{
+            boolean isDelete = ItemModel.wheelDeleteOnAction(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
