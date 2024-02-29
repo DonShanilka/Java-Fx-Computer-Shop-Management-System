@@ -981,7 +981,7 @@ public class ItemController implements Initializable {
         var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
 
         try {
-            boolean isSave = ItemModel.lapAddOnAction(dto);
+            boolean isSave = ItemModel.mbAddOnAction(dto);
 
             if (isSave){
                 new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
