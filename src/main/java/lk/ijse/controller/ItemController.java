@@ -811,9 +811,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.accAdd(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -824,17 +824,17 @@ public class ItemController implements Initializable {
 
     @FXML
     void accDeleteOnAction(ActionEvent event) {
-        String nic = AccId.getText();
+        String id = AccId.getText();
 
-        ItemDto dto = new ItemDto(nic);
+        ItemDto dto = new ItemDto(id);
 
         try{
             boolean isDelete = ItemModel.accDelete(dto);
 
             if (isDelete){
-                new Alert(Alert.AlertType.CONFIRMATION, "Customer is Delete");
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Customer is Not Delete");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -870,9 +870,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.chAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -914,9 +914,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.gpuAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -958,9 +958,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.lapAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -1002,9 +1002,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.mbAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -1051,9 +1051,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.monitorAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
@@ -1090,9 +1090,9 @@ public class ItemController implements Initializable {
             boolean isSave = ItemModel.otherAddOnAction(dto);
 
             if (isSave){
-                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
 
         } catch (SQLException e) {
