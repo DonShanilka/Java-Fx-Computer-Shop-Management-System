@@ -362,8 +362,8 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
-    void storageDeleteOnAction(ActionEvent event) throws SQLException {
+
+    public static boolean storageDeleteOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM item WHERE id = ?";
