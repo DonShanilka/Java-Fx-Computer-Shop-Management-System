@@ -1099,7 +1099,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void ramAddOnAction(ActionEvent event) {
+        String id = txtRamId.getText();
+        String brand = txtBrand.getText();
+        String modelno = txtRamModel.getText();
+        String year = txtRamYear.getText();
+        double price = Double.parseDouble(txtRamPrice.getText());
+        String spec = txtRamSpec.getText();
+        String supid = txtRamSupId.getText();
+        Date date = Date.valueOf(txtRamDate.getValue());
+        int qty = Integer.parseInt(txtRamQty.getText());
+        String type = txtRamType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.ramAddOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Acc Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Acc is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
