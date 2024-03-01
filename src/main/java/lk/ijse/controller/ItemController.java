@@ -1504,7 +1504,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void storageUpdateOnAction(ActionEvent event) {
+        String id = stoID.getText();
+        String brand = stoBrand.getText();
+        String modelno = stoModel.getText();
+        String year = stoYear.getText();
+        double price = Double.parseDouble(stoPrice.getText());
+        String spec = stoSpec.getText();
+        String supid = stoSupID.getText();
+        Date date = Date.valueOf(stoDate.getValue());
+        int qty = Integer.parseInt(stoQty.getText());
+        String type = stoType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.storageUpdateOnAction(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION,"Storage is Update .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Storage is Not Update");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
