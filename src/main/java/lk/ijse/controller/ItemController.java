@@ -1010,6 +1010,7 @@ public class ItemController implements Initializable {
 
     }
 
+
     @FXML
     void gpuUpdateOnAction(ActionEvent event) {
         String id = txtGpuId.getText();
@@ -1093,7 +1094,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void lapUpdateOnAction(ActionEvent event) {
+        String id = txtLapId.getText();
+        String brand = txtLapBrand.getText();
+        String modelno = txtLapModelNo.getText();
+        String year = txtLapYear.getText();
+        double price = Double.parseDouble(txtLapPrice.getText());
+        String spec = txtLapSpec.getText();
+        String supid = txtLapsupName.getText();
+        Date date = Date.valueOf(txtLapDate.getValue());
+        int qty = Integer.parseInt(txtLapQty.getText());
+        String type = txtLapType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.lapUpdateOnAction(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
