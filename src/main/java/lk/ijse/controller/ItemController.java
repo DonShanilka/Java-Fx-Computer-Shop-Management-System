@@ -865,9 +865,9 @@ public class ItemController implements Initializable {
             boolean isUpdate = ItemModel.accUpdate(dto);
 
             if (isUpdate){
-                new Alert(Alert.AlertType.CONFIRMATION,"Item Save .");
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Update .");
             } else {
-                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+                new Alert(Alert.AlertType.ERROR, "Item is Not Update");
             }
 
         } catch (SQLException e) {
