@@ -1586,7 +1586,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void upsUpdateOnAction(ActionEvent event) {
+        String id = upsId.getText();
+        String brand = upsBrand.getText();
+        String modelno = upsModel.getText();
+        String year = upsYear.getText();
+        double price = Double.parseDouble(upsPrice.getText());
+        String spec = upsSpec.getText();
+        String supid = upsSupId.getText();
+        Date date = Date.valueOf(upsDate.getValue());
+        int qty = Integer.parseInt(upsQty.getText());
+        String type = upsType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.upsUpdateOnAction(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION,"Ups is Update .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Ups is Not Update");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
