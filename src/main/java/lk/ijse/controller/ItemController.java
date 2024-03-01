@@ -1673,7 +1673,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void wheelUpdateOnAction(ActionEvent event) {
+        String id = wheelId.getText();
+        String brand = wheelBrrand.getText();
+        String modelno = weelMode.getText();
+        String year = weelYear.getText();
+        double price = Double.parseDouble(wheelPrice.getText());
+        String spec = wheelSpec.getText();
+        String supid = wheelSupId.getText();
+        Date date = Date.valueOf(wheelDate.getValue());
+        int qty = Integer.parseInt(wheelQty.getText());
+        String type = wheelType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.wheelUpdateOnAction(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION,"Wheel is Update .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Wheel is Not Update");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
