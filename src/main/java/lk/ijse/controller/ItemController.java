@@ -1176,7 +1176,31 @@ public class ItemController implements Initializable {
 
     @FXML
     void mbUpdateOnAction(ActionEvent event) {
+        String id = MBId.getText();
+        String brand = MbBrand.getText();
+        String modelno = MBmodelNo.getText();
+        String year = MByear.getText();
+        double price = Double.parseDouble(MBprice.getText());
+        String spec = MBspec.getText();
+        String supid = MBsupID.getText();
+        Date date = Date.valueOf(MBDate.getValue());
+        int qty = Integer.parseInt(MBqTy.getText());
+        String type = MBtype.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.mbUpdateOnAction(dto);
+
+            if (isUpdate){
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
