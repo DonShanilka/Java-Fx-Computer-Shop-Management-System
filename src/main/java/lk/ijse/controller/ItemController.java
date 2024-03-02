@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 public class ItemController implements Initializable {
 
     @FXML
-    public TableView <?> OtherTM;
+    public TableView <ItemTm> OtherTM;
 
     @FXML
     public TextField MbBrand;
@@ -105,7 +105,7 @@ public class ItemController implements Initializable {
     private JFXComboBox<String> CasType;
 
     @FXML
-    private TableView<?> CasingTm;
+    private TableView<ItemTm> CasingTm;
 
     @FXML
     private JFXTextArea Casspec;
@@ -114,10 +114,10 @@ public class ItemController implements Initializable {
     private TextField Casyear;
 
     @FXML
-    private TableView<?> Gputm;
+    private TableView<ItemTm> Gputm;
 
     @FXML
-    private TableView<?> LapToptm;
+    private TableView<ItemTm> LapToptm;
 
     @FXML
     private DatePicker MBDate;
@@ -141,16 +141,16 @@ public class ItemController implements Initializable {
     private TextField MBsupID;
 
     @FXML
-    private TableView<?> MBtm;
+    private TableView<ItemTm> MBtm;
 
     @FXML
     private TextField MByear;
 
     @FXML
-    private TableView<?> Ramtm;
+    private TableView<ItemTm> Ramtm;
 
     @FXML
-    private TableView<?> UPStm;
+    private TableView<ItemTm> UPStm;
 
     @FXML
     private JFXButton casingAddOnAction;
@@ -219,7 +219,7 @@ public class ItemController implements Initializable {
     private TextField moniSupID;
 
     @FXML
-    private TableView<?> moniTm;
+    private TableView<ItemTm> moniTm;
 
     @FXML
     private JFXComboBox<String> moniType;
@@ -285,7 +285,7 @@ public class ItemController implements Initializable {
     private TextField stoYear;
 
     @FXML
-    private TableView<?> storageTM;
+    private TableView<ItemTm> storageTM;
 
     @FXML
     private TableColumn<?, ?> tmAccBrand;
@@ -1002,7 +1002,7 @@ public class ItemController implements Initializable {
         ObservableList<ItemTm> obList = FXCollections.observableArrayList();
 
         try{
-            List<ItemDto> dtoList = model.accGetAll();
+            List<ItemDto> dtoList = model.chGetAll();
 
             for (ItemDto dto : dtoList){
                 obList.add(new ItemTm(
@@ -1108,7 +1108,38 @@ public class ItemController implements Initializable {
         }
     }
 
-        @FXML
+
+    public void loadAllgpu(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.gpuGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            Gputm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    @FXML
     void lapAddOnAction(ActionEvent event) {
         String id = txtLapId.getText();
         String brand = txtLapBrand.getText();
