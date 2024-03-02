@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.EmployeeDto;
 import lk.ijse.dto.ItemDto;
@@ -801,6 +802,23 @@ public class ItemController implements Initializable {
     private JFXComboBox<String> wheelType;
 
     private final String[] ty = {"Brand New", "Use"};
+
+
+
+    private void setCellValueFactoryaACC(){
+        tmAccId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmAccBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmAccModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmAccYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmAccPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmAccspec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmAccSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmAccDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmAccQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmAccType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
 
     @FXML
     void accAddOnAction(ActionEvent event) {
@@ -2053,6 +2071,18 @@ public class ItemController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setCellValueFactoryaACC();
+        loadAllacc();
+        loadAllch();
+        loadAllgpu();
+        loadAlllap();
+        loadAllmb();
+        loadAllmoni();
+        loadAllother();
+        loadAllram();
+        loadAllstorage();
+        loadAllups();
+        loadAllwheel();
         AccType.getItems().addAll(ty);
         chType.getItems().addAll(ty);
         txtLapType.getItems().addAll(ty);

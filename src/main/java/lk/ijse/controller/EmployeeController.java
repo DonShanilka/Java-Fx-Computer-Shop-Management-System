@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class EmployeeControlleController implements Initializable {
+public class EmployeeController implements Initializable {
     @FXML
     public TextField txtNation;
     @FXML
