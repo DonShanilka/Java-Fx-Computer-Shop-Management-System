@@ -78,7 +78,7 @@ public class ItemController implements Initializable {
     private TableView<ItemTm> AccessoriesTm;
 
     @FXML
-    private TableView<?> CHtm;
+    private TableView<ItemTm> CHtm;
 
     @FXML
     private TextField CasBrand;
@@ -994,6 +994,37 @@ public class ItemController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
+
+    public void loadAllch(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.accGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            CHtm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     @FXML
     void gpuAddOnAction(ActionEvent event) {
