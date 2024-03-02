@@ -1,14 +1,12 @@
 package lk.ijse.model;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import lk.ijse.db.DbConnection;
+import lk.ijse.dto.EmployeeDto;
 import lk.ijse.dto.ItemDto;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemModel {
 
@@ -63,6 +61,36 @@ public class ItemModel {
 
         return pstm.executeUpdate()>0;
     }
+
+
+    public List<ItemDto> accGetAll() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM item";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        List<ItemDto> itemList = new ArrayList<>();
+
+        ResultSet resultSet = pstm.executeQuery();
+        while (resultSet.next()){
+            itemList.add(new ItemDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getDouble(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getDate(8),
+                    resultSet.getInt(9),
+                    resultSet.getString(10)
+
+            ));
+        }
+
+        return itemList;
+    }
+
 
     public static boolean chAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
@@ -170,7 +198,7 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
+
     public static boolean lapAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -223,7 +251,7 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
+
     public static boolean mbAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -276,12 +304,7 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
-    void moniListAction(ActionEvent event) {
 
-    }
-
-    @FXML
     public static boolean monitorAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -334,7 +357,7 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
+
     public static boolean otherAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -364,11 +387,6 @@ public class ItemModel {
 
         pstm.setString(1 ,dto.getId());
         return pstm.executeUpdate()>0;
-    }
-
-    @FXML
-    void otherListOnAction(ActionEvent event) {
-
     }
 
 
@@ -413,7 +431,7 @@ public class ItemModel {
         return pstm.executeUpdate() > 0;
     }
 
-    @FXML
+
     public static boolean ramDeleteOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -422,11 +440,6 @@ public class ItemModel {
 
         pstm.setString(1 ,dto.getId());
         return pstm.executeUpdate()>0;
-    }
-
-    @FXML
-    void ramListOnAction(ActionEvent event) {
-
     }
 
 
@@ -482,10 +495,6 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
-    void storageListOnAction(ActionEvent event) {
-
-    }
 
 
     public static boolean storageUpdateOnAction(ItemDto dto) throws SQLException {
@@ -508,7 +517,7 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
+
     public static boolean upsAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
@@ -540,10 +549,6 @@ public class ItemModel {
         return pstm.executeUpdate()>0;
     }
 
-    @FXML
-    void upsListOnAction(ActionEvent event) {
-
-    }
 
 
     public static boolean upsUpdateOnAction(ItemDto dto) throws SQLException {
