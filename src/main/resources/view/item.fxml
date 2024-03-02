@@ -99,7 +99,7 @@
                         </Label>
                         <JFXTextArea fx:id="txtLapSpec" layoutX="339.0" layoutY="194.0" prefHeight="98.0" prefWidth="176.0" />
                         <TextField fx:id="txtLapYear" layoutX="367.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" />
-                        <TextField fx:id="txtLapId" layoutX="99.0" layoutY="62.0" />
+                        <TextField fx:id="txtLapId" layoutX="99.0" layoutY="62.0" style="-fx-background-color: #d9d9d9;" />
                         <TextField fx:id="txtLapPrice" layoutX="366.0" layoutY="119.0" />
                         <TextField fx:id="txtLapBrand" layoutX="99.0" layoutY="119.0" />
                         <TextField fx:id="txtLapModelNo" layoutX="99.0" layoutY="190.0" />
