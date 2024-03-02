@@ -45,6 +45,9 @@ public class ItemController implements Initializable {
     public TextField wheelQty;
 
     @FXML
+    public TableView<ItemTm> wheelTm;
+
+    @FXML
     private TextField AccBrand;
 
     @FXML
@@ -2012,6 +2015,36 @@ public class ItemController implements Initializable {
                 new Alert(Alert.AlertType.ERROR, "Wheel is Not Update");
             }
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public void loadAllwheel(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.wheelGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            wheelTm.setItems(obList);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
