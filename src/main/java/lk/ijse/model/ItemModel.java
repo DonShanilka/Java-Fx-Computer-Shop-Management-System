@@ -146,6 +146,35 @@ public class ItemModel {
     }
 
 
+    public List<ItemDto> chGetAll() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM item";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        List<ItemDto> itemList = new ArrayList<>();
+
+        ResultSet resultSet = pstm.executeQuery();
+        while (resultSet.next()){
+            itemList.add(new ItemDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getDouble(5),
+                    resultSet.getString(6),
+                    resultSet.getString(7),
+                    resultSet.getDate(8),
+                    resultSet.getInt(9),
+                    resultSet.getString(10)
+
+            ));
+        }
+
+        return itemList;
+    }
+
+
     public static boolean gpuAddOnAction(ItemDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
