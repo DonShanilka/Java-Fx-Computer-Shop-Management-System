@@ -804,22 +804,6 @@ public class ItemController implements Initializable {
     private final String[] ty = {"Brand New", "Use"};
 
 
-
-    private void setCellValueFactoryaACC(){
-        tmAccId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        tmAccBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
-        tmAccModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
-        tmAccYear.setCellValueFactory(new PropertyValueFactory<>("year"));
-        tmAccPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        tmAccspec.setCellValueFactory(new PropertyValueFactory<>("spec"));
-        tmAccSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
-        tmAccDate.setCellValueFactory(new PropertyValueFactory<>("date"));
-        tmAccQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
-        tmAccType.setCellValueFactory(new PropertyValueFactory<>("type"));
-
-    }
-
-
     @FXML
     void accAddOnAction(ActionEvent event) {
         String id = AccId.getText();
@@ -2069,9 +2053,56 @@ public class ItemController implements Initializable {
     }
 
 
+    private void setCellValueFactoryaACC(){
+        tmAccId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmAccBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmAccModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmAccYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmAccPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmAccspec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmAccSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmAccDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmAccQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmAccType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
+
+    private void setCellValueFactoryaLap(){
+        tmLapId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmLapBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmLapModelNo.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmLapYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmLapPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmLapSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmLapSupName.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmLapDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmLapQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmLapType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
+
+    private void setCellValueFactoryaGpu(){
+        tmGpuId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmGpuBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmGpuModelNo.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmGpuYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmGpuPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmGpuSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmGpuSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmGpuDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmGpuQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmGpuType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setCellValueFactoryaACC();
+        setCellValueFactoryaLap();
+        setCellValueFactoryaGpu();
         loadAllacc();
         loadAllch();
         loadAllgpu();
