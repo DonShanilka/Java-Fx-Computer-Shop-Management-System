@@ -1786,6 +1786,37 @@ public class ItemController implements Initializable {
         }
     }
 
+
+    public void loadAllstorage(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.storageGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            storageTM.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     @FXML
     void upsAddOnAction(ActionEvent event) {
         String id = upsId.getText();
