@@ -2098,11 +2098,27 @@ public class ItemController implements Initializable {
     }
 
 
+    private void setCellValueFactoryaRam(){
+        tmRamId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmRamBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmRamModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmRamYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmRamPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmRamSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmRamSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmRamDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmRamType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setCellValueFactoryaACC();
         setCellValueFactoryaLap();
         setCellValueFactoryaGpu();
+        setCellValueFactoryaRam();
         loadAllacc();
         loadAllch();
         loadAllgpu();
