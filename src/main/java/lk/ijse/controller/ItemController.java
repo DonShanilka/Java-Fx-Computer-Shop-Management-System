@@ -1447,6 +1447,37 @@ public class ItemController implements Initializable {
         }
     }
 
+
+    public void loadAllmoni(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.moniGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            moniTm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     @FXML
     void otherAddOnAction(ActionEvent event) {
         String id = otherid.getText();
