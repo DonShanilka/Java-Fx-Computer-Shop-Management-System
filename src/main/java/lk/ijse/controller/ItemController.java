@@ -1988,10 +1988,6 @@ public class ItemController implements Initializable {
 
     }
 
-    @FXML
-    void wheelTm(ActionEvent event) {
-
-    }
 
     @FXML
     void wheelUpdateOnAction(ActionEvent event) {
@@ -2161,6 +2157,7 @@ public class ItemController implements Initializable {
         loadAllstorage();
         loadAllups();
         loadAllwheel();
+        loadAllcasing();
         AccType.getItems().addAll(ty);
         chType.getItems().addAll(ty);
         txtLapType.getItems().addAll(ty);
