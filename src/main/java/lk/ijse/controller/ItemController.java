@@ -2137,6 +2137,20 @@ public class ItemController implements Initializable {
 
     }
 
+    private void setCellValueFactoryaMonitor(){
+        tmMoniID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmMoniBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmMoniModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmMoniYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmMoniPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmMoniSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmMoniSupID.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmCasingDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmCasingQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmCasingType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -2146,6 +2160,7 @@ public class ItemController implements Initializable {
         setCellValueFactoryaRam();
         setCellValueFactoryaMB();
         setCellValueFactoryaCasing();
+        setCellValueFactoryaMonitor();
         loadAllacc();
         loadAllch();
         loadAllgpu();
