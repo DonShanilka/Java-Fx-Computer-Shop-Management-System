@@ -1,5 +1,6 @@
 package lk.ijse.model;
 
+import javafx.event.ActionEvent;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.EmployeeDto;
 import lk.ijse.dto.ItemDto;
@@ -912,6 +913,36 @@ public class ItemModel {
         }
 
         return itemList;
+    }
+
+
+    public static boolean casingAddOnAction(ItemDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "INSERT INTO item VALUES(?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getId());
+        pstm.setString(2,dto.getBrand());
+        pstm.setString(3,dto.getModelno());
+        pstm.setString(4,dto.getYear());
+        pstm.setDouble(5,dto.getPrice());
+        pstm.setString(6,dto.getSpec());
+        pstm.setString(7,dto.getSupid());
+        pstm.setDate(8, (Date) dto.getDate());
+        pstm.setInt(9,dto.getQty());
+        pstm.setString(10,dto.getType());
+
+        return pstm.executeUpdate() > 0;
+    }
+
+
+    public static boolean casingUpdateOnAction(ItemDto dto) {
+
+    }
+
+    public static boolean casingDeleteOnAction(ItemDto dto) {
+
     }
 
 
