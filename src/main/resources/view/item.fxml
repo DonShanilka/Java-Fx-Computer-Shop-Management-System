@@ -608,7 +608,7 @@
                               <TableColumn fx:id="tmCasingType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton fx:id="casingAddOnAction" layoutX="584.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                        <JFXButton layoutX="584.0" layoutY="287.0" onAction="#casingAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
@@ -623,17 +623,17 @@
                               </Lighting>
                            </effect>
                         </JFXButton>
-                        <JFXButton fx:id="casingListOnAction" layoutX="963.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                        <JFXButton layoutX="963.0" layoutY="287.0" onAction="#casingListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton fx:id="casingUpdateOnAction" layoutX="709.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                        <JFXButton layoutX="709.0" layoutY="287.0" onAction="#casingUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton fx:id="casingDeleteOnAction" layoutX="840.0" layoutY="287.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#casingDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>

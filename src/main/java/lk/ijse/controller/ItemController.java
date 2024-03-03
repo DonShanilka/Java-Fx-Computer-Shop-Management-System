@@ -2175,4 +2175,47 @@ public class ItemController implements Initializable {
         otherType.getItems().addAll(ty);
 
     }
+
+    public void casingAddOnAction(ActionEvent actionEvent) {
+    }
+
+    public void casingListOnAction(ActionEvent actionEvent) {
+    }
+
+    public void casingUpdateOnAction(ActionEvent actionEvent) {
+    }
+
+    public void casingDeleteOnAction(ActionEvent actionEvent) {
+    }
+
+
+    public void loadAllcasing(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<ItemDto> dtoList = model.wheelGetAll();
+
+            for (ItemDto dto : dtoList){
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+
+                ));
+            }
+            CasingTm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
