@@ -2195,7 +2195,7 @@ public class ItemController implements Initializable {
         ObservableList<ItemTm> obList = FXCollections.observableArrayList();
 
         try{
-            List<ItemDto> dtoList = model.wheelGetAll();
+            List<ItemDto> dtoList = model.();
 
             for (ItemDto dto : dtoList){
                 obList.add(new ItemTm(
