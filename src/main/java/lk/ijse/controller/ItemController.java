@@ -2197,6 +2197,21 @@ public class ItemController implements Initializable {
     }
 
 
+    private void setCellValueFactoryPowerSup(){
+        tmUpsId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmUpsBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmUpsModel.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmUpsYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmUpsPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmUpsSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmUpsSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmUpsDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmUpsQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmUPStype.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setCellValueFactoryaACC();
@@ -2209,6 +2224,7 @@ public class ItemController implements Initializable {
         setCellValueFactoryaStorage();
         setCellValueFactoryCH();
         setCellValueFactoryWheel();
+        setCellValueFactoryPowerSup();
         loadAllacc();
         loadAllch();
         loadAllgpu();
