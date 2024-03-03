@@ -2310,7 +2310,7 @@ public class ItemController implements Initializable {
         ItemDto dto = new ItemDto(id);
 
         try{
-            boolean isDelete = ItemModel.wheelDeleteOnAction(dto);
+            boolean isDelete = ItemModel.casingDeleteOnAction(dto);
 
             if (isDelete){
                 new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
