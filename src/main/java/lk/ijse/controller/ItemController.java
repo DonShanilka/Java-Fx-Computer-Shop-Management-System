@@ -2301,7 +2301,31 @@ public class ItemController implements Initializable {
     }
 
     public void casingUpdateOnAction(ActionEvent actionEvent) {
+        String id = CasId.getText();
+        String brand = CasBrand.getText();
+        String modelno = CasModel.getText();
+        String year = Casyear.getText();
+        double price = Double.parseDouble(CasPrice.getText());
+        String spec = Casspec.getText();
+        String supid = wheelSupId.getText();
+        Date date = Date.valueOf(wheelDate.getValue());
+        int qty = Integer.parseInt(wheelQty.getText());
+        String type = wheelType.getValue();
 
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.casingUpdateOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void casingDeleteOnAction(ActionEvent actionEvent) {
