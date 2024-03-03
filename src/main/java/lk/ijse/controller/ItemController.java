@@ -2270,15 +2270,56 @@ public class ItemController implements Initializable {
 
 
     public void casingAddOnAction(ActionEvent actionEvent) {
+        String id = CasId.getText();
+        String brand = CasBrand.getText();
+        String modelno = CasModel.getText();
+        String year = Casyear.getText();
+        double price = Double.parseDouble(CasPrice.getText());
+        String spec = Casspec.getText();
+        String supid = wheelSupId.getText();
+        Date date = Date.valueOf(wheelDate.getValue());
+        int qty = Integer.parseInt(wheelQty.getText());
+        String type = wheelType.getValue();
+
+        var dto = new ItemDto(id,brand,modelno,year,price,spec,supid,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.casingAddOnAction(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Save .");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void casingListOnAction(ActionEvent actionEvent) {
     }
 
     public void casingUpdateOnAction(ActionEvent actionEvent) {
+
     }
 
     public void casingDeleteOnAction(ActionEvent actionEvent) {
+        String id = CasId.getText();
+
+        ItemDto dto = new ItemDto(id);
+
+        try{
+            boolean isDelete = ItemModel.wheelDeleteOnAction(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Delete");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
