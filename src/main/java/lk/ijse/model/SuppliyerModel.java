@@ -58,7 +58,7 @@ public class SuppliyerModel {
         return empList;
     }
 
-    public static boolean deleteEmployee(SuppliyerDto dto) throws SQLException {
+    public static boolean deleteSup(SuppliyerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "DELETE FROM suppliyer WHERE nic = ?";
@@ -68,7 +68,7 @@ public class SuppliyerModel {
         return pstm.executeUpdate() > 0;
     }
 
-    public static boolean updateEmployee(SuppliyerDto dto) throws SQLException {
+    public static boolean updatesup(SuppliyerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
         String sql = "UPDATE suppliyer SET name=?, address=?, email=?, mobile=?, cName=?, pName=?, date=?, qty=? WHERE nic=?";

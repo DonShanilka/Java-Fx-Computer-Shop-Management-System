@@ -105,7 +105,7 @@ public class SuppliyerController {
         var dto = new SuppliyerDto(nic);
 
         try {
-            boolean isDelete = SuppliyerModel.deleteEmployee(dto);
+            boolean isDelete = SuppliyerModel.deleteSup(dto);
 
             if (isDelete){
                 new Alert(Alert.AlertType.CONFIRMATION, "Supplier is Delete");
@@ -126,7 +126,30 @@ public class SuppliyerController {
 
     @FXML
     void supUpdateOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        String email = txtEmail.getText();
+        String mobile = txtMobile.getText();
+        String cName = txtCompanyName.getText();
+        String pName = txtProductName.getText();
+        String date = txtDate.getText();
+        int qty = Integer.parseInt(txtQty.getText());
 
+        var dto = new SuppliyerDto(nic,name,address,email,mobile,cName,pName,date,qty);
+
+        try {
+            boolean isSave = SuppliyerModel.updatesup(dto);
+
+            if (isSave){
+                new Alert(Alert.AlertType.CONFIRMATION, "Supplier is Save");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Supplier is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
