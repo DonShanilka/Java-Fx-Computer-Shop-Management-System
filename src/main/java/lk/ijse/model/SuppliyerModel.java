@@ -32,17 +32,17 @@ public class SuppliyerModel {
     }
 
 
-    public List<EmployeeDto> getAll() throws SQLException {
+    public List<SuppliyerDto> getAll() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "SELECT * FROM employee";
+        String sql = "SELECT * FROM suppliyer";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
-        List<EmployeeDto> empList = new ArrayList<>();
+        List<SuppliyerDto> empList = new ArrayList<>();
 
         ResultSet resultSet = pstm.executeQuery();
         while (resultSet.next()){
-            empList.add(new EmployeeDto(
+            empList.add(new SuppliyerDto(
                     resultSet.getString(1),
                     resultSet.getString(2),
                     resultSet.getString(3),
@@ -50,15 +50,8 @@ public class SuppliyerModel {
                     resultSet.getString(5),
                     resultSet.getString(6),
                     resultSet.getString(7),
-                    resultSet.getString(8),
-                    resultSet.getString(9),
-                    resultSet.getString(10),
-                    resultSet.getString(11),
-                    resultSet.getString(12),
-                    resultSet.getString(13),
-                    resultSet.getString(14),
-                    resultSet.getString(15),
-                    resultSet.getString(16)
+                    resultSet.getDate(8),
+                    resultSet.getInt(9)
             ));
         }
 
