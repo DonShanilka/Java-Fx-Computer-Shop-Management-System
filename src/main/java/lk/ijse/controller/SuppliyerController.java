@@ -96,11 +96,26 @@ public class SuppliyerController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @FXML
     void supDeleteOnAction(ActionEvent event) {
+        String nic = txtNic.getText();
+
+        var dto = new SuppliyerDto(nic);
+
+        try {
+            boolean isDelete = SuppliyerModel.deleteEmployee(dto);
+
+            if (isDelete){
+                new Alert(Alert.AlertType.CONFIRMATION, "Supplier is Delete");
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Supplier is Not Delete");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

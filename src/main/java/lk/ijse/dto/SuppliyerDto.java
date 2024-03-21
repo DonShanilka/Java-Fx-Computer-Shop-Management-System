@@ -2,8 +2,6 @@ package lk.ijse.dto;
 
 import lombok.*;
 
-import java.util.Date;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -19,4 +17,8 @@ public class SuppliyerDto {
     private String pName;
     private String date;
     private int qty;
+
+    public SuppliyerDto(String nic) {
+        this.nic = nic;
+    }
 }
