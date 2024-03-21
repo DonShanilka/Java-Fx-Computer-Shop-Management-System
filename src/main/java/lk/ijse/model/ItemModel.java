@@ -1,10 +1,7 @@
 package lk.ijse.model;
 
-import javafx.event.ActionEvent;
 import lk.ijse.db.DbConnection;
-import lk.ijse.dto.EmployeeDto;
 import lk.ijse.dto.ItemDto;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -61,17 +66,17 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TableView fx:id="SuppliyerTm" layoutX="14.0" layoutY="520.0" prefHeight="211.0" prefWidth="1106.0">
+      <TableView fx:id="SuppliyerTm" layoutX="13.0" layoutY="471.0" prefHeight="237.0" prefWidth="1106.0">
         <columns>
-          <TableColumn prefWidth="104.0" text="NIC" />
-          <TableColumn prefWidth="135.0" text="Name" />
-            <TableColumn prefWidth="128.0" text="Address" />
-            <TableColumn prefWidth="143.0" text="Email" />
-            <TableColumn prefWidth="101.0" text="Mobile" />
-            <TableColumn prefWidth="148.0" text="Company Name" />
-            <TableColumn prefWidth="148.0" text="Product Name" />
-            <TableColumn prefWidth="127.0" text="Date" />
-            <TableColumn prefWidth="71.0" text="QTY" />
+          <TableColumn fx:id="tmNic" prefWidth="104.0" text="NIC" />
+          <TableColumn fx:id="tmName" prefWidth="135.0" text="Name" />
+            <TableColumn fx:id="tmAddress" prefWidth="128.0" text="Address" />
+            <TableColumn fx:id="tmEmail" prefWidth="143.0" text="Email" />
+            <TableColumn fx:id="tmMobile" prefWidth="101.0" text="Mobile" />
+            <TableColumn fx:id="tmCompanyName" prefWidth="148.0" text="Company Name" />
+            <TableColumn fx:id="tmProductname" prefWidth="148.0" text="Product Name" />
+            <TableColumn fx:id="tmDate" prefWidth="127.0" text="Date" />
+            <TableColumn fx:id="tmQty" prefWidth="71.0" text="QTY" />
         </columns>
       </TableView>
       <TextField fx:id="txtNic" layoutX="123.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
@@ -83,5 +88,35 @@
       <TextField fx:id="txtProductName" layoutX="875.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
       <TextField fx:id="txtQty" layoutX="875.0" layoutY="269.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
       <TextField fx:id="txtDate" layoutX="875.0" layoutY="199.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <JFXButton layoutX="624.0" layoutY="358.0" onAction="#supAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="1003.0" layoutY="358.0" onAction="#supListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="749.0" layoutY="358.0" onAction="#supUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="877.0" layoutY="358.0" onAction="#supDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
