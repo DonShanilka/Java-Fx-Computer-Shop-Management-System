@@ -17,6 +17,6 @@ public class SuppliyerDto {
     private String mobile;
     private String cName;
     private String pName;
-    private Date date;
+    private String date;
     private int qty;
 }

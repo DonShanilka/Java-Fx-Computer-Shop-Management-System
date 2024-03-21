@@ -50,7 +50,7 @@ public class SuppliyerModel {
                     resultSet.getString(5),
                     resultSet.getString(6),
                     resultSet.getString(7),
-                    resultSet.getDate(8),
+                    resultSet.getString(8),
                     resultSet.getInt(9)
             ));
         }
