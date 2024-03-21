@@ -58,10 +58,10 @@ public class SuppliyerModel {
         return empList;
     }
 
-    public static boolean deleteEmployee(EmployeeDto dto) throws SQLException {
+    public static boolean deleteEmployee(SuppliyerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "DELETE FROM employee WHERE nic = ?";
+        String sql = "DELETE FROM suppliyer WHERE nic = ?";
         PreparedStatement pstm = connection.prepareStatement(sql);
         pstm.setString(1 , dto.getNic());
 
