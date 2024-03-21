@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -25,17 +26,17 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="438.0" layoutY="130.0" text="Email  :">
+      <Label layoutX="387.0" layoutY="130.0" text="Email  :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="438.0" layoutY="203.0" text="Mobile  :">
+      <Label layoutX="387.0" layoutY="203.0" text="Mobile  :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="438.0" layoutY="273.0" text="Company Name  :">
+      <Label layoutX="387.0" layoutY="273.0" text="Company Name  :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -45,7 +46,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="763.0" layoutY="140.0" text="Product Name  :">
+      <Label layoutX="763.0" layoutY="130.0" text="Product Name  :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -60,7 +61,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="14.0" layoutY="520.0" prefHeight="211.0" prefWidth="1106.0">
+      <TableView fx:id="SuppliyerTm" layoutX="14.0" layoutY="520.0" prefHeight="211.0" prefWidth="1106.0">
         <columns>
           <TableColumn prefWidth="104.0" text="NIC" />
           <TableColumn prefWidth="135.0" text="Name" />
@@ -73,5 +74,14 @@
             <TableColumn prefWidth="71.0" text="QTY" />
         </columns>
       </TableView>
+      <TextField fx:id="txtNic" layoutX="123.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtName" layoutX="123.0" layoutY="199.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtAddress" layoutX="123.0" layoutY="269.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtEmail" layoutX="512.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtCompanyName" layoutX="512.0" layoutY="269.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtMobile" layoutX="512.0" layoutY="199.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtProductName" layoutX="875.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtQty" layoutX="875.0" layoutY="269.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
+      <TextField fx:id="txtDate" layoutX="875.0" layoutY="199.0" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: #bfbfbf; -fx-background-radius: 0;" />
    </children>
 </AnchorPane>
