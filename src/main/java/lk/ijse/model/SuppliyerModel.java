@@ -68,28 +68,21 @@ public class SuppliyerModel {
         return pstm.executeUpdate() > 0;
     }
 
-    public static boolean updateEmployee(EmployeeDto dto) throws SQLException {
+    public static boolean updateEmployee(SuppliyerDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "UPDATE employee SET name=?, address=?, email=?, mobile=?, bDate=?, gender=?, nation=?, relation=?, eId=?, rolle=?, jDate=?, department=?, pQ=?, experiance=?, uni=? WHERE nic=?";
+        String sql = "UPDATE suppliyer SET name=?, address=?, email=?, mobile=?, cName=?, pName=?, date=?, qty=? WHERE nic=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, dto.getName());
         pstm.setString(2, dto.getAddress());
         pstm.setString(3, dto.getEmail());
         pstm.setString(4, dto.getMobile());
-        pstm.setString(5, dto.getBDate());
-        pstm.setString(6, dto.getGender());
-        pstm.setString(7, dto.getNation());
-        pstm.setString(8, dto.getRelation());
-        pstm.setString(9, dto.getEId());
-        pstm.setString(10,dto.getRolle());
-        pstm.setString(11,dto.getJDate());
-        pstm.setString(12,dto.getDepart());
-        pstm.setString(13,dto.getPQ());
-        pstm.setString(14,dto.getExperiance());
-        pstm.setString(15,dto.getUni());
-        pstm.setString(16,dto.getNic());
+        pstm.setString(5, dto.getCName());
+        pstm.setString(6, dto.getPName());
+        pstm.setString(7, String.valueOf(dto.getDate()));
+        pstm.setInt(8, dto.getQty());
+        pstm.setString(9, dto.getNic());
 
         return pstm.executeUpdate() > 0;
 
