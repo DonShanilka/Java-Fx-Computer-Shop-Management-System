@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="745.0" prefWidth="1116.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SuppliyerController">
    <children>
@@ -54,5 +55,23 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+      <Label layoutX="1028.0" layoutY="10.0" text="Suppliyer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView layoutX="14.0" layoutY="520.0" prefHeight="211.0" prefWidth="1106.0">
+        <columns>
+          <TableColumn prefWidth="104.0" text="NIC" />
+          <TableColumn prefWidth="135.0" text="Name" />
+            <TableColumn prefWidth="128.0" text="Address" />
+            <TableColumn prefWidth="143.0" text="Email" />
+            <TableColumn prefWidth="101.0" text="Mobile" />
+            <TableColumn prefWidth="148.0" text="Company Name" />
+            <TableColumn prefWidth="148.0" text="Product Name" />
+            <TableColumn prefWidth="127.0" text="Date" />
+            <TableColumn prefWidth="71.0" text="QTY" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
