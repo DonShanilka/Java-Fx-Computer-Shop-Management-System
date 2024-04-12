@@ -28,7 +28,7 @@ public class SuppliyerModel {
         pstm.setString(8, String.valueOf(dto.getDate()));
         pstm.setInt(9, dto.getQty());
 
-        return pstm.executeUpdate() > 0;
+        return pstm.executeUpdate() > 0;;
     }
 
 
