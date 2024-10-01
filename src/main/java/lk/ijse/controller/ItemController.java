@@ -419,7 +419,23 @@ public class ItemController implements Initializable {
 
     @FXML
     void itemDeleteOnAction(ActionEvent event) {
-        System.out.println("hi hello");
+        String id = txtItemId.getText();
+
+        var dto = new ItemDto(id);
+
+        try {
+            boolean isDelete = ItemModel.accDelete(dto);
+
+            if (isDelete) {
+                new Alert(Alert.AlertType.CONFIRMATION,"Item is Delete");
+                loadAllItem();
+            } else {
+                new Alert(Alert.AlertType.ERROR,"Item is Not Delete");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML

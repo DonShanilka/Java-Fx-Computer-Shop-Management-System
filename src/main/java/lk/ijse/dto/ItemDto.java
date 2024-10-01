@@ -3,7 +3,6 @@ package lk.ijse.dto;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,4 +22,7 @@ public class ItemDto {
     private int qty;
     private String type;
 
+    public ItemDto(String id) {
+        this.id = id;
+    }
 }
