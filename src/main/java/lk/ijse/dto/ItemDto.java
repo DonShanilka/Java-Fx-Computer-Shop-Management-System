@@ -19,12 +19,8 @@ public class ItemDto {
     private double price;
     private String spec;
     private String supid;
-    private Date date;
+    private LocalDate date;
     private int qty;
     private String type;
 
-
-    public ItemDto(String nic) {
-        this.id = nic;
-    }
 }

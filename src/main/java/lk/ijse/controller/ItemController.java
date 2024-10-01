@@ -3,12 +3,14 @@ package lk.ijse.controller;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.dto.ItemDto;
+import lk.ijse.model.EmployeeModel;
+import lk.ijse.model.ItemModel;
+
+import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class ItemController {
 
@@ -425,7 +427,31 @@ public class ItemController {
 
     @FXML
     void itemaddOnAction(ActionEvent event) {
+        String id = txtItemId.getText();
+        String brand = txtItemBrand.getText();
+        String model = txtItemModel.getText();
+        String year = txtItemYear.getText();
+        double price = Double.parseDouble(txtItemPrice.getText());
+        String spec = txtItemSpec.getText();
+        String supId = String.valueOf(txtItemSuppliyerID.getValue());
+        LocalDate date = txtItemBuyDate.getValue();
+        int qty = Integer.parseInt(txtItemQty.getText());
+        String type = (String) txtItemType.getValue();
 
+        var dto = new ItemDto(id,brand,model,year,price,spec,supId,date,qty,type);
+
+        try {
+            boolean isSave = ItemModel.saveItem(dto);
+
+            if (isSave) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Save").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Item is Not Save");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
