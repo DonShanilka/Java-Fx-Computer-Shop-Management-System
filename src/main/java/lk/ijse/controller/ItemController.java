@@ -445,6 +445,32 @@ public class ItemController implements Initializable {
 
     @FXML
     void itemUpdateOnAction(ActionEvent event) {
+        String id = txtItemId.getText();
+        String brand = txtItemBrand.getText();
+        String model = txtItemModel.getText();
+        String year = txtItemYear.getText();
+        double price = Double.parseDouble(txtItemPrice.getText());
+        String spec = txtItemSpec.getText();
+        String supId = String.valueOf(txtItemSuppliyerID.getValue());
+        LocalDate date = txtItemBuyDate.getValue();
+        int qty = Integer.parseInt(txtItemQty.getText());
+        String type = (String) txtItemType.getValue();
+
+        var dto = new ItemDto(id,brand,model,year,price,spec,supId,date,qty,type);
+
+        try {
+            boolean isUpdate = ItemModel.accUpdate(dto);
+
+            if (isUpdate) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Item is Update");
+                loadAllItem();
+            } else {
+                new Alert(Alert.AlertType.ERROR,"Item is Not Update");
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
