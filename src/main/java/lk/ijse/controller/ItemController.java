@@ -1,18 +1,25 @@
 package lk.ijse.controller;
 
 import com.jfoenix.controls.JFXComboBox;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.dto.ItemDto;
-import lk.ijse.model.EmployeeModel;
 import lk.ijse.model.ItemModel;
+import lk.ijse.tm.ItemTm;
 
+import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class ItemController {
+public class ItemController implements Initializable {
 
     @FXML
     private TableView<?> AccessoriesTm;
@@ -24,7 +31,7 @@ public class ItemController {
     private TableView<?> CasingTm;
 
     @FXML
-    private TableView<?> Gputm;
+    private TableView<ItemTm> Gputm;
 
     @FXML
     private TableView<?> MBtm;
@@ -445,6 +452,7 @@ public class ItemController {
 
             if (isSave) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item is Save").show();
+                loadAllItem();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Item is Not Save");
             }
@@ -454,4 +462,50 @@ public class ItemController {
         }
     }
 
+    public void loadAllItem(){
+        var model = new ItemModel();
+
+        ObservableList<ItemTm> obList = FXCollections.observableArrayList();
+
+        try {
+            List<ItemDto> dtoList = model.accGetAll();
+
+            for (ItemDto dto : dtoList) {
+                obList.add(new ItemTm(
+                        dto.getId(),
+                        dto.getBrand(),
+                        dto.getModelno(),
+                        dto.getYear(),
+                        dto.getPrice(),
+                        dto.getSpec(),
+                        dto.getSupid(),
+                        dto.getDate(),
+                        dto.getQty(),
+                        dto.getType()
+                ));
+            }
+            Gputm.setItems(obList);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void setCellValueFactory(){
+        tmGpuId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        tmGpuBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        tmGpuModelNo.setCellValueFactory(new PropertyValueFactory<>("modelno"));
+        tmGpuYear.setCellValueFactory(new PropertyValueFactory<>("year"));
+        tmGpuPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        tmGpuSpec.setCellValueFactory(new PropertyValueFactory<>("spec"));
+        tmGpuSupId.setCellValueFactory(new PropertyValueFactory<>("supid"));
+        tmGpuDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        tmGpuQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        tmGpuType.setCellValueFactory(new PropertyValueFactory<>("type"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadAllItem();
+        setCellValueFactory();
+    }
 }
