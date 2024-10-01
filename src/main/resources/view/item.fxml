@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -10,6 +9,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -46,7 +46,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label layoutX="281.0" layoutY="74.0" text="Year  :">
+                        <Label layoutX="284.0" layoutY="65.0" text="Year  :">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -83,22 +83,16 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <JFXTextArea fx:id="txtLapSpec" layoutX="339.0" layoutY="194.0" prefHeight="98.0" prefWidth="176.0" />
-                        <TextField fx:id="txtLapYear" layoutX="367.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" />
-                        <TextField fx:id="txtLapId" layoutX="99.0" layoutY="62.0" style="-fx-background-color: #d9d9d9;" />
-                        <TextField fx:id="txtLapPrice" layoutX="366.0" layoutY="119.0" />
-                        <TextField fx:id="txtLapBrand" layoutX="99.0" layoutY="119.0" />
-                        <TextField fx:id="txtLapModelNo" layoutX="99.0" layoutY="190.0" />
+
                         <Label layoutX="761.0" layoutY="24.0" text="Other Details" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="txtLapsupName" layoutX="705.0" layoutY="62.0" />
-                        <TextField fx:id="txtLapQty" layoutX="705.0" layoutY="190.0" />
-                        <JFXComboBox fx:id="txtLapType" layoutX="934.0" layoutY="61.0" prefHeight="25.0" prefWidth="125.0" />
-                        <DatePicker fx:id="txtLapDate" layoutX="705.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXButton layoutX="586.0" layoutY="284.0" onAction="#lapAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
+                        <TextField fx:id="txtItemQty" layoutX="705.0" layoutY="190.0" />
+                        <JFXComboBox fx:id="txtItemType" layoutX="934.0" layoutY="61.0" prefHeight="25.0" prefWidth="125.0" />
+                        <DatePicker fx:id="txtItemBuyDate" layoutX="705.0" layoutY="132.0" prefHeight="25.0" prefWidth="150.0" />
+                        <JFXButton layoutX="586.0" layoutY="284.0" onAction="#itemaddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
@@ -113,21 +107,28 @@
                               </Lighting>
                            </effect>
                         </JFXButton>
-                        <JFXButton layoutX="965.0" layoutY="284.0" onAction="#lapGetListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
+                        <JFXButton layoutX="965.0" layoutY="284.0" onAction="#itemGetAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="711.0" layoutY="284.0" onAction="#lapUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
+                        <JFXButton layoutX="711.0" layoutY="284.0" onAction="#itemUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
-                        <JFXButton layoutX="839.0" layoutY="284.0" onAction="#lapDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
+                        <JFXButton layoutX="839.0" layoutY="284.0" onAction="#itemDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="CROSSHAIR" />
                            </cursor>
                         </JFXButton>
+                        <TextField fx:id="txtItemId" layoutX="104.0" layoutY="62.0" />
+                        <TextField fx:id="txtItemBrand" layoutX="104.0" layoutY="120.0" />
+                        <TextField fx:id="txtItemModel" layoutX="104.0" layoutY="190.0" />
+                        <TextField fx:id="txtItemYear" layoutX="366.0" layoutY="62.0" />
+                        <TextField fx:id="txtItemPrice" layoutX="366.0" layoutY="120.0" />
+                        <TextArea fx:id="txtItemSpec" layoutX="341.0" layoutY="199.0" prefHeight="200.0" prefWidth="200.0" />
+                        <JFXComboBox fx:id="txtItemSuppliyerID" layoutX="705.0" layoutY="62.0" prefHeight="25.0" prefWidth="154.0" />
                      </children>
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
@@ -238,60 +239,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="CasId" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="CasModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="CasBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="Casyear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="CasPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="CasSupId" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="CasQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="CasDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="CasType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -304,12 +251,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="Casspec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="CasingTm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmCasingId" prefWidth="62.0" text="ID" />
@@ -324,36 +265,6 @@
                               <TableColumn fx:id="tmCasingType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="584.0" layoutY="287.0" onAction="#casingAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <!--<Light.Distant />-->
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="963.0" layoutY="287.0" onAction="#casingListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="709.0" layoutY="287.0" onAction="#casingUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#casingDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -361,60 +272,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="moniID" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="moniModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="moniBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="moniYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="moniPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="moniSupID" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="moniQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="moniDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="moniType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -427,12 +284,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="moniSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="moniTm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmMoniID" prefWidth="62.0" text="ID" />
@@ -447,36 +298,6 @@
                               <TableColumn fx:id="tmMoniType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="584.0" layoutY="287.0" onAction="#monitorAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="963.0" layoutY="287.0" onAction="#moniListAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="709.0" layoutY="287.0" onAction="#monitorUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#monitorDeteleOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -484,60 +305,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="stoID" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="stoModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="stoBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="stoYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="stoPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="stoSupID" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="stoQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="stoDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="stoType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -550,12 +317,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="stoSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="storageTM" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmStoID" prefWidth="62.0" text="ID" />
@@ -570,36 +331,6 @@
                               <TableColumn fx:id="tmStoType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="583.0" layoutY="287.0" onAction="#storageAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="962.0" layoutY="287.0" onAction="#storageListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="708.0" layoutY="287.0" onAction="#storageUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="838.0" layoutY="287.0" onAction="#storageDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -607,60 +338,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="chID" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="chModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="chBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="chYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="chPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="chSupid" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="chQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="chDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="chType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -673,12 +350,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="chSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="CHtm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmCHid" prefWidth="62.0" text="ID" />
@@ -693,36 +364,6 @@
                               <TableColumn fx:id="tmChType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="585.0" layoutY="287.0" onAction="#chAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="964.0" layoutY="287.0" onAction="#chListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="711.0" layoutY="287.0" onAction="#chUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#chDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -730,60 +371,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="wheelId" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="weelMode" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="wheelBrrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="weelYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="wheelPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="wheelSupId" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="wheelQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="wheelDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="wheelType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -796,12 +383,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="wheelSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="wheelTm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmWeelId" prefWidth="62.0" text="ID" />
@@ -816,36 +397,6 @@
                               <TableColumn fx:id="tmWeelType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="584.0" layoutY="287.0" onAction="#wheelAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="963.0" layoutY="287.0" onAction="#wheelList" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="709.0" layoutY="287.0" onAction="#wheelUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="840.0" layoutY="287.0" onAction="#wheelDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -853,60 +404,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="21.0" layoutY="70.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="21.0" layoutY="128.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="21.0" layoutY="199.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="886.0" layoutY="70.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="281.0" layoutY="79.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="552.0" layoutY="199.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="281.0" layoutY="128.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="550.0" layoutY="128.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="550.0" layoutY="70.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="AccId" layoutX="106.0" layoutY="75.0" />
-                        <TextField fx:id="AccModel" layoutX="106.0" layoutY="195.0" />
-                        <TextField fx:id="AccBrand" layoutX="106.0" layoutY="124.0" />
-                        <TextField fx:id="AccYear" layoutX="349.0" layoutY="75.0" />
-                        <TextField fx:id="AccPrice" layoutX="349.0" layoutY="124.0" />
-                        <TextField fx:id="AccSupId" layoutX="691.0" layoutY="67.0" />
-                        <TextField fx:id="AccQty" layoutX="691.0" layoutY="195.0" />
-                        <DatePicker fx:id="AccDate" layoutX="691.0" layoutY="124.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="AccType" layoutX="933.0" layoutY="66.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="18.0" layoutY="15.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="550.0" layoutY="15.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="217.0" layoutY="18.0" text="Laptop Details" textFill="WHITE">
@@ -919,12 +416,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="281.0" layoutY="195.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="AccSpec" layoutX="338.0" layoutY="195.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="AccessoriesTm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmAccId" prefWidth="62.0" text="ID" />
@@ -939,36 +430,6 @@
                               <TableColumn fx:id="tmAccType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="586.0" layoutY="287.0" onAction="#accAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="965.0" layoutY="287.0" onAction="#accListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="711.0" layoutY="287.0" onAction="#accUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="842.0" layoutY="287.0" onAction="#accDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -976,60 +437,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="upsId" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="upsModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="upsBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="upsYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="upsPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="upsSupId" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="upsQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="upsDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="upsType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -1042,12 +449,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="upsSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="UPStm" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmUpsId" prefWidth="62.0" text="ID" />
@@ -1062,36 +463,6 @@
                               <TableColumn fx:id="tmUPStype" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="585.0" layoutY="287.0" onAction="#upsAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="964.0" layoutY="287.0" onAction="#upsListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="710.0" layoutY="287.0" onAction="#upsUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="841.0" layoutY="287.0" onAction="#upsDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1099,60 +470,6 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="18.0" layoutY="72.0" text="ID    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="130.0" text="Brand    :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="18.0" layoutY="201.0" text="Model No   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="883.0" layoutY="72.0" text="Type :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="81.0" text="Year  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="549.0" layoutY="201.0" text="Qty   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="278.0" layoutY="130.0" text="Price   :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="130.0" text="Date  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="547.0" layoutY="72.0" text="Suppliyer Name /  ID  :">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="otherid" layoutX="103.0" layoutY="77.0" />
-                        <TextField fx:id="otherModel" layoutX="103.0" layoutY="197.0" />
-                        <TextField fx:id="otherBrand" layoutX="103.0" layoutY="126.0" />
-                        <TextField fx:id="odherYear" layoutX="346.0" layoutY="77.0" />
-                        <TextField fx:id="otherPrice" layoutX="346.0" layoutY="126.0" />
-                        <TextField fx:id="otherSupId" layoutX="688.0" layoutY="69.0" />
-                        <TextField fx:id="otherQty" layoutX="688.0" layoutY="197.0" />
-                        <DatePicker fx:id="otherDate" layoutX="688.0" layoutY="126.0" prefHeight="25.0" prefWidth="150.0" />
-                        <JFXComboBox fx:id="otherType" layoutX="930.0" layoutY="68.0" prefHeight="25.0" prefWidth="132.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="15.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="499.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e30ff" height="26.0" layoutX="547.0" layoutY="17.0" stroke="#3e30ff" strokeType="INSIDE" width="515.0" />
                         <Label layoutX="214.0" layoutY="20.0" text="Laptop Details" textFill="WHITE">
@@ -1165,12 +482,6 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Label layoutX="278.0" layoutY="197.0" text="Sepec:">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </Label>
-                        <JFXTextArea fx:id="otherSpec" layoutX="335.0" layoutY="197.0" prefHeight="98.0" prefWidth="176.0" />
                         <TableView fx:id="OtherTM" layoutX="17.0" layoutY="336.0" prefHeight="253.0" prefWidth="1048.0">
                            <columns>
                               <TableColumn fx:id="tmOtherID" prefWidth="62.0" text="ID" />
@@ -1185,35 +496,6 @@
                               <TableColumn fx:id="tmOtherType" text="Type" />
                            </columns>
                         </TableView>
-                        <JFXButton layoutX="587.0" layoutY="287.0" onAction="#otherAddOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #80ff80;" text="ADD">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                           <effect>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                 </light>
-                              </Lighting>
-                           </effect>
-                        </JFXButton>
-                        <JFXButton layoutX="966.0" layoutY="287.0" onAction="#otherListOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #66a3ff;" text="LIST">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="712.0" layoutY="287.0" onAction="#otherUpdateOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffb366;" text="UPDATE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
-                        <JFXButton layoutX="843.0" layoutY="287.0" onAction="#otherDeleteOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff5050;" text="DELETE" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="CROSSHAIR" />
-                           </cursor>
-                        </JFXButton>
                      </children></AnchorPane>
                </content>
             </Tab>
