@@ -419,7 +419,7 @@ public class ItemController implements Initializable {
 
     @FXML
     void itemDeleteOnAction(ActionEvent event) {
-        System.out.println("hi");
+        System.out.println("hi hello");
     }
 
     @FXML
