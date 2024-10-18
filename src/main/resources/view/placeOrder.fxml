@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="683.0" prefWidth="1103.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PlaceOrderController">
-
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#003bff" height="50.0" stroke="#003bff" strokeType="INSIDE" width="1103.0" />
+      <Label layoutX="14.0" layoutY="76.0" text="ORDER ID :" />
+      <Label fx:id="lblOrderId" layoutX="91.0" layoutY="76.0" />
+      <Label layoutX="874.0" layoutY="76.0" text="Date :" />
+      <DatePicker layoutX="922.0" layoutY="72.0" />
+      <Label layoutX="14.0" layoutY="122.0" text="Customer ID :" />
+      <JFXComboBox layoutX="168.0" layoutY="118.0" prefHeight="25.0" prefWidth="144.0" />
+      <Label layoutX="14.0" layoutY="179.0" text="Customer Name :" />
+      <Label layoutX="14.0" layoutY="230.0" text="Item ID :" />
+      <Label layoutX="11.0" layoutY="282.0" text="Item Name :" />
+      <Label layoutX="11.0" layoutY="342.0" text="Item Price :" />
+      <Label layoutX="14.0" layoutY="398.0" text="Qty" />
+      <Label layoutX="14.0" layoutY="454.0" text="Total Price :" />
+      <JFXButton layoutX="11.0" layoutY="544.0" style="-fx-background-color: yellow;" text="Clear" />
+      <JFXButton layoutX="68.0" layoutY="544.0" style="-fx-background-color: blue;" text="add to cart" textFill="WHITE" />
+      <Label fx:id="lbl_customer_name" layoutX="168.0" layoutY="179.0" />
+      <Label fx:id="lbl_item_name" layoutX="168.0" layoutY="282.0" />
+      <Label fx:id="lbl_item_price" layoutX="154.0" layoutY="342.0" />
+      <TextField fx:id="txt_qty" layoutX="168.0" layoutY="394.0" />
+      <Label fx:id="lbl_total_price" layoutX="168.0" layoutY="454.0" />
+   </children>
 </AnchorPane>
