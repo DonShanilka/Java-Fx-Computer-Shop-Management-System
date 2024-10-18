@@ -23,8 +23,8 @@
       <Label layoutX="11.0" layoutY="342.0" text="Item Price :" />
       <Label layoutX="14.0" layoutY="398.0" text="Qty" />
       <Label layoutX="14.0" layoutY="454.0" text="Total Price :" />
-      <JFXButton layoutX="11.0" layoutY="544.0" style="-fx-background-color: yellow;" text="Clear" />
-      <JFXButton layoutX="68.0" layoutY="544.0" style="-fx-background-color: blue;" text="add to cart" textFill="WHITE" />
+      <JFXButton layoutX="11.0" layoutY="544.0" onAction="#clearOnAction" style="-fx-background-color: yellow;" text="Clear" />
+      <JFXButton layoutX="68.0" layoutY="544.0" onAction="#addToCartOnAction" style="-fx-background-color: blue;" text="add to cart" textFill="WHITE" />
       <Label fx:id="lbl_customer_name" layoutX="168.0" layoutY="179.0" />
       <Label fx:id="lbl_item_name" layoutX="168.0" layoutY="282.0" />
       <Label fx:id="lbl_item_price" layoutX="154.0" layoutY="342.0" />
