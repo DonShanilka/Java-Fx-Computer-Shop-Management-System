@@ -89,4 +89,10 @@ public class CustomerModel {
         return customerDtoList;
     }
 
+    public static CustomerDto searchCustomer(String nic) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM customer WHERE nic=?";
+    }
+
 }

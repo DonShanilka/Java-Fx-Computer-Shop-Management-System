@@ -114,6 +114,9 @@ public class PlaceOrderController {
     public void cmbCustomerOnAction(ActionEvent actionEvent) {
         String id = lblCustomerId.getValue();
 
+        try {
+            CustomerDto dto = customerModel.(id);
+        }
 
     }
 }
