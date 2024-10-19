@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,9 +13,8 @@
       <Label layoutX="14.0" layoutY="76.0" text="ORDER ID :" />
       <Label fx:id="lblOrderId" layoutX="91.0" layoutY="76.0" />
       <Label layoutX="874.0" layoutY="76.0" text="Date :" />
-      <DatePicker layoutX="922.0" layoutY="72.0" />
       <Label layoutX="14.0" layoutY="122.0" text="Customer ID :" />
-      <JFXComboBox layoutX="168.0" layoutY="118.0" prefHeight="25.0" prefWidth="144.0" />
+      <JFXComboBox layoutX="171.0" layoutY="226.0" onAction="#cmbItemOnAction" prefHeight="25.0" prefWidth="144.0" />
       <Label layoutX="14.0" layoutY="179.0" text="Customer Name :" />
       <Label layoutX="14.0" layoutY="230.0" text="Item ID :" />
       <Label layoutX="11.0" layoutY="282.0" text="Item Name :" />
@@ -30,5 +28,7 @@
       <Label fx:id="lbl_item_price" layoutX="154.0" layoutY="342.0" />
       <TextField fx:id="txt_qty" layoutX="168.0" layoutY="394.0" />
       <Label fx:id="lbl_total_price" layoutX="168.0" layoutY="454.0" />
+      <Label fx:id="lblOrderDate" layoutX="926.0" layoutY="76.0" />
+      <JFXComboBox fx:id="lblCustomerId" layoutX="171.0" layoutY="118.0" onAction="#cmbCustomerOnAction" prefHeight="25.0" prefWidth="144.0" />
    </children>
 </AnchorPane>
