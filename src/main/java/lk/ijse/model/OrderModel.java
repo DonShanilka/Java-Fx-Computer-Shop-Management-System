@@ -12,7 +12,7 @@ public class OrderModel {
     public String getLastId() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String sql = "SELECT id FROM orders ORDER BY id DESC LIMIT 1";
+        String sql = "SELECT o_id FROM order_details ORDER BY o_id DESC LIMIT 1";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         ResultSet resultSet = pstm.executeQuery();
