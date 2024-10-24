@@ -11,6 +11,7 @@ import lk.ijse.dto.ItemDto;
 import lk.ijse.model.CustomerModel;
 import lk.ijse.model.ItemModel;
 import lk.ijse.model.OrderModel;
+import lk.ijse.tm.CartTm;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -76,15 +77,37 @@ public class PlaceOrderController {
     CustomerModel customerModel = new CustomerModel();
     ItemModel itemModel = new ItemModel();
 
+    private ObservableList<CartTm> obList = FXCollections.observableArrayList();
+
     @FXML
     void addToCartOnAction(ActionEvent event) {
+        String iCode = lblItemId.getValue();
+        String des = lbl_item_name.getText();
+        double unitPrice = Double.parseDouble(lbl_item_price.getText());
+        int qty = Integer.parseInt(txt_qty.getText());
+        double discount = qty * Double.parseDouble(txt_discount.getText());
+        double total = (unitPrice * qty) - (discount * qty);
 
+        try {
+            if (!obList.isEmpty()) {
+                for (int i = 0; i < tm_Cart.getItems().size(); i++) {
+                    if (tm_itemId.getCellData(i).equals(iCode)) {
+                        int col_Qty = (int) tm_itemQty.getCellData(i);
+                        qty += col_Qty;
+                        total = unitPrice - discount * qty;
+                        obList.get(i).setItem_qty(String.valueOf(qty));
+                        obList.get(i).setTotal_price(String.valueOf(total));
+                    }
+                }
+            }
+        }
     }
 
     @FXML
     void clearOnAction(ActionEvent event) {
 
     }
+
 
     private void genarateNextId(){
         String orderId;
