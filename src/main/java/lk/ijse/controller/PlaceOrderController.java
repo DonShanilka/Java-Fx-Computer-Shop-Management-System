@@ -5,9 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import lk.ijse.dto.CustomerDto;
 import lk.ijse.dto.ItemDto;
 import lk.ijse.model.CustomerModel;
@@ -49,6 +47,30 @@ public class PlaceOrderController {
 
     @FXML
     private TextField txt_qty;
+
+    @FXML
+    private TableView<?> tm_Cart;
+
+    @FXML
+    private TableColumn<?, ?> tm_ItemName;
+
+    @FXML
+    private TableColumn<?, ?> tm_ItemPrice;
+
+    @FXML
+    private TableColumn<?, ?> tm_TotalPrice;
+
+    @FXML
+    private TableColumn<?, ?> tm_itemId;
+
+    @FXML
+    private TableColumn<?, ?> tm_itemQty;
+
+    @FXML
+    private TableColumn<?, ?> tm_Discount;
+
+    @FXML
+    private TextField txt_discount;
 
     OrderModel orderModel = new OrderModel();
     CustomerModel customerModel = new CustomerModel();
