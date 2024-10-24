@@ -28,4 +28,15 @@ public class CartTm {
         this.discount = discount;
         this.new_price = new_price;
     }
+
+    public CartTm(String iCode, String des, double unitPrice, int qty, double discount, double total) {
+
+        this.item_id = iCode;
+        this.item_name = des;
+        this.item_price = String.valueOf(unitPrice);
+        this.item_qty = String.valueOf(qty);
+        this.total_price = String.valueOf(total);
+        this.discount = String.valueOf(discount);
+        this.new_price = String.valueOf(total - discount);
+    }
 }

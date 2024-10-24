@@ -50,7 +50,7 @@ public class PlaceOrderController {
     private TextField txt_qty;
 
     @FXML
-    private TableView<?> tm_Cart;
+    private TableView<CartTm> tm_Cart;
 
     @FXML
     private TableColumn<?, ?> tm_ItemName;
@@ -97,10 +97,26 @@ public class PlaceOrderController {
                         total = unitPrice - discount * qty;
                         obList.get(i).setItem_qty(String.valueOf(qty));
                         obList.get(i).setTotal_price(String.valueOf(total));
+
+                        calulateTotal();
+                        tm_Cart.refresh();
+                        return;
                     }
                 }
             }
+            obList.add(new CartTm(iCode, des, unitPrice, qty, discount, total));
+            tm_Cart.setItems(obList);
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+    }
+
+    private void calulateTotal(){
+        double total = 0.0;
+        for (int i = 0; i < tm_Cart.getItems().size(); i++) {
+            total += (double) tm_TotalPrice.getCellData(i);
+        }
+        lbl_total_price.setText("Rs : " + total);
     }
 
     @FXML
