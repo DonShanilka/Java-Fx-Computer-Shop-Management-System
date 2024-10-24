@@ -94,6 +94,7 @@ public class PlaceOrderController {
     }
 
     public void cmbItemOnAction(ActionEvent actionEvent) {
+
     }
 
     private void lodadCustomerId(){

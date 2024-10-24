@@ -3,6 +3,7 @@ package lk.ijse.model;
 import lk.ijse.db.DbConnection;
 import lk.ijse.dto.ItemDto;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,6 +91,32 @@ public class ItemModel {
     }
 
 
+    public static ItemDto searchItemId(String id) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM item WHERE id=?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        ItemDto dto = null;
+
+        if(resultSet.next()) {
+            String brand = resultSet.getString(2);
+            String modelno = resultSet.getString(3);
+            String year = resultSet.getString(4);
+            double price = resultSet.getDouble(5);
+            String spec = resultSet.getString(6);
+            String supid = resultSet.getString(7);
+            LocalDate date = resultSet.getDate(8).toLocalDate();
+            int qty = resultSet.getInt(9);
+            String type = resultSet.getString(10);
+
+            dto = new ItemDto(id, brand, modelno, year, price, spec, supid, date, qty, type);
+        }
+        return dto;
+    }
 
 
 
