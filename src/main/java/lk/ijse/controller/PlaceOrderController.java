@@ -6,23 +6,25 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import lk.ijse.dto.CustomerDto;
+import lk.ijse.dto.ItemDto;
 import lk.ijse.model.CustomerModel;
 import lk.ijse.model.ItemModel;
 import lk.ijse.model.OrderModel;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 public class PlaceOrderController {
 
     @FXML
     private JFXComboBox<String> lblCustomerId;
+
+    @FXML
+    private Label lbl_Qty_On_hand;
 
     @FXML
     private Label lblOrderDate;
@@ -93,8 +95,19 @@ public class PlaceOrderController {
         setData();
     }
 
-    public void cmbItemOnAction(ActionEvent actionEvent) {
 
+
+    public void cmbItemOnAction(ActionEvent actionEvent) {
+        String id = lblCustomerId.getValue();
+
+        try {
+            ItemDto dto = itemModel.searchItemId(id);
+            lbl_item_name.setText(dto.getBrand());
+            lbl_item_price.setText(String.valueOf(dto.getPrice()));
+            lbl_Qty_On_hand.setText(String.valueOf(dto.getQty()));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void lodadCustomerId(){

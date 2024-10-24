@@ -19,16 +19,18 @@
       <Label layoutX="14.0" layoutY="230.0" text="Item ID :" />
       <Label layoutX="11.0" layoutY="282.0" text="Item Name :" />
       <Label layoutX="11.0" layoutY="342.0" text="Item Price :" />
-      <Label layoutX="14.0" layoutY="398.0" text="Qty" />
-      <Label layoutX="14.0" layoutY="454.0" text="Total Price :" />
+      <Label layoutX="11.0" layoutY="446.0" text="Qty" />
+      <Label layoutX="13.0" layoutY="498.0" text="Total Price :" />
       <JFXButton layoutX="11.0" layoutY="544.0" onAction="#clearOnAction" style="-fx-background-color: yellow;" text="Clear" />
       <JFXButton layoutX="68.0" layoutY="544.0" onAction="#addToCartOnAction" style="-fx-background-color: blue;" text="add to cart" textFill="WHITE" />
       <Label fx:id="lbl_customer_name" layoutX="168.0" layoutY="179.0" />
       <Label fx:id="lbl_item_name" layoutX="168.0" layoutY="282.0" />
       <Label fx:id="lbl_item_price" layoutX="154.0" layoutY="342.0" />
-      <TextField fx:id="txt_qty" layoutX="168.0" layoutY="394.0" />
+      <TextField fx:id="txt_qty" layoutX="165.0" layoutY="442.0" />
       <Label fx:id="lbl_total_price" layoutX="168.0" layoutY="454.0" />
       <Label fx:id="lblOrderDate" layoutX="926.0" layoutY="76.0" />
       <JFXComboBox fx:id="lblCustomerId" layoutX="171.0" layoutY="118.0" onAction="#cmbCustomerOnAction" prefHeight="25.0" prefWidth="144.0" />
+      <Label layoutX="11.0" layoutY="396.0" text="Qty On Hand :" />
+      <Label fx:id="lbl_Qty_On_hand" layoutX="171.0" layoutY="396.0" />
    </children>
 </AnchorPane>
