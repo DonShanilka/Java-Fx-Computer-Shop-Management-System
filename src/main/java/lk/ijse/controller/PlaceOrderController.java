@@ -24,6 +24,9 @@ public class PlaceOrderController {
     private JFXComboBox<String> lblCustomerId;
 
     @FXML
+    private JFXComboBox<String> lblItemId;
+
+    @FXML
     private Label lbl_Qty_On_hand;
 
     @FXML
@@ -91,11 +94,26 @@ public class PlaceOrderController {
 
     public void initialize(){
         lodadCustomerId();
+        loadItemId();
         genarateNextId();
         setData();
     }
 
+    public void loadItemId(){
+        ObservableList<String> obList = FXCollections.observableArrayList();
 
+        try {
+            List<ItemDto> idList = itemModel.accGetAll();
+
+            for (ItemDto dto : idList) {
+                obList.add(dto.getId());
+            }
+            lblItemId.setItems(obList);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void cmbItemOnAction(ActionEvent actionEvent) {
         String id = lblCustomerId.getValue();
