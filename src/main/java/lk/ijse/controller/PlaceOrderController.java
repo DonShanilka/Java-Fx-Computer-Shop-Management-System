@@ -88,6 +88,7 @@ public class PlaceOrderController {
     }
 
     public void initialize(){
+        lodadCustomerId();
         genarateNextId();
         setData();
     }
@@ -108,14 +109,16 @@ public class PlaceOrderController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public void cmbCustomerOnAction(ActionEvent actionEvent) {
         String id = lblCustomerId.getValue();
 
         try {
-            CustomerDto dto = customerModel.(id);
+            CustomerDto dto = customerModel.searchCustomer(id);
+            lbl_customer_name.setText(dto.getName());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
 
     }
