@@ -116,11 +116,11 @@ public class PlaceOrderController {
     }
 
     public void cmbItemOnAction(ActionEvent actionEvent) {
-        String id = lblCustomerId.getValue();
+        String id = lblItemId.getValue();
 
         try {
             ItemDto dto = itemModel.searchItemId(id);
-            lbl_item_name.setText(dto.getBrand());
+            lbl_item_name.setText(dto.getSpec());
             lbl_item_price.setText(String.valueOf(dto.getPrice()));
             lbl_Qty_On_hand.setText(String.valueOf(dto.getQty()));
         } catch (SQLException e) {
